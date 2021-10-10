@@ -25,6 +25,16 @@
   margin-right: 5px;
   padding-right: 3px;
 }
+
+.line-1{
+  position: relative;
+  left: 80px;
+}
+
+.line-2{
+  position: relative;
+  right: 80px;
+}
 /* End of Christian's Input */
 
 
