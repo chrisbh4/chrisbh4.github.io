@@ -11463,6 +11463,7 @@ html {
 }
 .masthead .masthead-avatar {
   width: 15rem;
+  border-radius: 15%;
 }
 
 @media (min-width: 992px) {
