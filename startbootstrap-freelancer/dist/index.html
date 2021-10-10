@@ -31,6 +31,7 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#home">Home</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#tech">Skills</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#resume">Resume</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
                     </ul>
@@ -47,7 +48,8 @@
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line line-1"></div>
-                    <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://docs.google.com/document/d/1nqLfJX-GPoemXbRCh9t1LVSeiRU5ggxKt35Ng2uJOfA/edit?usp=sharing"><i class="fas fa-id-card-alt"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/chrisbh4"><i class="fab fa-github"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="https://angel.co/u/christian-brown-22"><i class="fab fa-angellist"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/christian-brown-8770311ba/"><i class="fab fa-fw fa-linkedin-in"></i></a>
@@ -96,7 +98,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/goodTunes-clickbait.png" alt="..." />
+                            <img class="img-fluid" id="goodTunes-img" src="assets/img/portfolio/goodTunes-clickbait.png" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 4-->
@@ -274,15 +276,16 @@
                         <a class="btn btn-outline-light btn-social mx-1" href="mailto:chrismbh4@gmail.com"><i class="fas fa-envelope"></i></a>
                     </div>
                     <!-- Footer About Text-->
-                    <!-- <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                    <div class="col-lg-4">
+                        <h4 class=" mb-4">Resume</h4>
                         <p class="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
-                            .
+
+                            <!-- <a href="https://docs.google.com/document/d/1nqLfJX-GPoemXbRCh9t1LVSeiRU5ggxKt35Ng2uJOfA/edit?usp=sharing">Click Here</a> -->
+                            <a  class="btn btn-outline-light btn-social mx-1" href="https://docs.google.com/document/d/1nqLfJX-GPoemXbRCh9t1LVSeiRU5ggxKt35Ng2uJOfA/edit?usp=sharing"><i id="resume" class="fas fa-id-card-alt"></i></a>
+
                         </p>
                     </div>
-                </div> -->
+                </div>
             </div>
         </footer>
         <!-- Copyright Section-->
@@ -312,11 +315,16 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/ThePlug-clickbait.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
+                                    <p> <a  href="https://theplugg.herokuapp.com">Live</a>
+                                        |
+
+                                        <a  href="https://github.com/chrisbh4/ThePlug">Repo</a>
+                                    </p>
                                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                    <!-- <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
-                                    </button>
+                                    </button> -->
                                 </div>
                             </div>
                         </div>
@@ -344,11 +352,16 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/SpudHub-clickbait.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
+                                    <p> <a  href="https://spudhub.herokuapp.com">Live</a>
+                                        |
+
+                                        <a  href="https://github.com/michellekontoff/spudhub">Repo</a>
+                                    </p>
                                     <p class="mb-4">SpudHub, an Etsy clone, is a site where people can buy locally grown produce from farmers who have excess goods to share. Users can add, update, and delte items they'd like to sell, and users can add, edit, delete, and purchase items from their shopping cart.</p>
-                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                    <!-- <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
-                                    </button>
+                                    </button> -->
                                 </div>
                             </div>
                         </div>
@@ -376,11 +389,16 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/goodTunes-clickbait.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
+                                    <p> <a  href="https://good-tunes.herokuapp.com/">Live</a>
+                                        |
+
+                                        <a  href="https://github.com/chrisbh4/GoodTunes">Repo</a>
+                                    </p>
                                     <p class="mb-4">GoodTunes, a GoodReads clone, is a digital music discovery and management application where users can discover new music and add their favoirte albums to user owned shelves. Users can create, edit, and delete user owned album shelves. Users can add and delete albums from user's shelves. Users can create, edit, delete comments created by the user.  </p>
-                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                    <!-- <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
-                                    </button>
+                                    </button> -->
                                 </div>
                             </div>
                         </div>
@@ -409,10 +427,10 @@
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">GoodTunes, a GoodReads clone, is a digital music discovery and management application that:</p>
-                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                    <!-- <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
-                                    </button>
+                                    </button> -->
                                 </div>
                             </div>
                         </div>
@@ -441,10 +459,10 @@
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                    <!-- <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
-                                    </button>
+                                    </button> -->
                                 </div>
                             </div>
                         </div>
@@ -473,10 +491,10 @@
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                    <!-- <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
-                                    </button>
+                                    </button> -->
                                 </div>
                             </div>
                         </div>

@@ -28,13 +28,18 @@
 
 .line-1{
   position: relative;
-  left: 80px;
+  left: 95px;
 }
 
 .line-2{
   position: relative;
-  right: 80px;
+  right: 95px;
 }
+
+#goodTunes-img{
+  height: 233.5px;
+}
+
 /* End of Christian's Input */
 
 
