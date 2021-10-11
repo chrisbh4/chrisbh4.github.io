@@ -10,8 +10,30 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-.test{
-  color: red;
+ #location-network{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+#tech-icons > *{
+  font-size: 55px;
+  margin-right: 5px;
+  padding-right: 3px;
+}
+
+.line-1{
+  position: relative;
+  left: 95px;
+}
+
+.line-2{
+  position: relative;
+  right: 95px;
+}
+
+#goodTunes-img{
+  height: 233.5px;
 }
 
 :root {
