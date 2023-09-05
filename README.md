@@ -1,84 +1,68 @@
-# [Start Bootstrap - Freelancer](https://startbootstrap.com/theme/freelancer/)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[Freelancer](https://startbootstrap.com/theme/freelancer/) is a one page, freelancer portfolio theme built with [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid, modal windows for each portfolio item, and a working PHP based contact form.
+## Available Scripts
 
-## Preview
+In the project directory, you can run:
 
-[![Freelancer Preview](https://assets.startbootstrap.com/img/screenshots/themes/freelancer.png)](https://startbootstrap.github.io/startbootstrap-freelancer/)
+### `npm start`
 
-**[View Live Preview](https://startbootstrap.github.io/startbootstrap-freelancer/)**
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Status
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/StartBootstrap/startbootstrap-freelancer/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-freelancer.svg)](https://www.npmjs.com/package/startbootstrap-freelancer)
-[![dependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-freelancer/status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-freelancer)
-[![devDependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-freelancer/dev-status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-freelancer?type=dev)
+### `npm test`
 
-## Download and Installation
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-To begin using this template, choose one of the following options to get started:
+### `npm run build`
 
-- [Download the latest release on Start Bootstrap](https://startbootstrap.com/theme/freelancer/)
-- Install using npm: `npm i startbootstrap-freelancer`
-- Clone the repo: `git clone https://github.com/StartBootstrap/startbootstrap-freelancer.git`
-- [Fork, Clone, or Download on GitHub](https://github.com/StartBootstrap/startbootstrap-freelancer)
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Usage
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-### Basic Usage
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-After downloading, simply edit the HTML and CSS files included with `dist` directory. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+### `npm run eject`
 
-### Advanced Usage
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Clone the source files of the theme and navigate into the theme's root directory. Run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `package.json` file to see which scripts are included.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-#### npm Scripts
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-- `npm run build` builds the project - this builds assets, HTML, JS, and CSS into `dist`
-- `npm run build:assets` copies the files in the `src/assets/` directory into `dist`
-- `npm run build:pug` compiles the Pug located in the `src/pug/` directory into `dist`
-- `npm run build:scripts` brings the `src/js/scripts.js` file into `dist`
-- `npm run build:scss` compiles the SCSS files located in the `src/scss/` directory into `dist`
-- `npm run clean` deletes the `dist` directory to prepare for rebuilding the project
-- `npm run start:debug` runs the project in debug mode
-- `npm start` or `npm run start` runs the project, launches a live preview in your default browser, and watches for changes made to files in `src`
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-You must have npm installed in order to use this build environment.
+## Learn More
 
-### Contact Form
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-The contact form available with this theme is prebuilt to use [SB Forms](https://startbootstrap.com/solution/contact-forms).
-SB Forms is a simple form solution for adding functional forms to your theme. Since this theme is prebuilt using our
-SB Forms markup, all you need to do is sign up for [SB Forms on Start Bootstrap](https://startbootstrap.com/solution/contact-forms).
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-After signing up you will need to set the domain name your form will be used on, and you will then see your
-access key. Copy this and paste it into the `data-sb-form-api-token='API_TOKEN'` data attribute in place of
-`API_TOKEN`. That's it! Your forms will be up and running!
+### Code Splitting
 
-If you aren't using SB Forms, simply delete the custom data attributes from the form, and remove the link above the
-closing `</body>` tag to SB Forms.
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-## Bugs and Issues
+### Analyzing the Bundle Size
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-freelancer/issues) here on GitHub or leave a comment on the [theme overview page at Start Bootstrap](https://startbootstrap.com/theme/freelancer/).
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-## About
+### Making a Progressive Web App
 
-Start Bootstrap is an open source library of free Bootstrap themes and templates. All of the free themes and templates on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-- <https://startbootstrap.com>
-- <https://twitter.com/SBootstrap>
+### Advanced Configuration
 
-Start Bootstrap was created by and is maintained by **[David Miller](https://davidmiller.io/)**.
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-- <https://davidmiller.io>
-- <https://twitter.com/davidmillerhere>
-- <https://github.com/davidtmiller>
+### Deployment
 
-Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-## Copyright and License
+### `npm run build` fails to minify
 
-Copyright 2013-2021 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE) license.
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
