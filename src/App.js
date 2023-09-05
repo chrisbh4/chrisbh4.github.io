@@ -62,7 +62,6 @@ function App() {
             <Text fontSize="5xl" ml={'8%'}>Christian Brown </Text>
             <Flex align='center' justify={'flex-end'} pr={'2%'} w={"50%"}>
               <Link href='#home' style={{ textDecoration: "none" }} onClick={(e) => handleClick(e, 'home')} fontWeight={'medium'} fontSize={'2xl'} ml={'5%'}   >Home</Link>
-              {/* <Link href='#about' onClick={(e) => handleClick(e, 'about')} textDecoration="dotted" fontWeight={'medium'} fontSize={'2xl'} ml={'5%'}>About</Link> */}
               <Link href='#past-experience' style={{ textDecoration: "none" }} onClick={(e) => handleClick(e, 'past-experience')}  fontWeight={'medium'} fontSize={'2xl'} ml={'5%'} wrap>Past Experiences</Link>
               <Link href='#skills' style={{ textDecoration: "none" }} onClick={(e) => handleClick(e, 'skills')}  fontWeight={'medium'} fontSize={'2xl'} ml={'5%'}>Skills</Link>
               <Link href='#projects' style={{ textDecoration: "none" }} onClick={(e) => handleClick(e, 'projects')}  fontWeight={'medium'} fontSize={'2xl'} ml={'5%'}>Projects</Link>
@@ -110,7 +109,7 @@ function App() {
             </VStack>
           </Flex>
         </Box>
-        <Box id='about' w="full" h="400px"  >
+        <Box id='about' w="full" h="400px" mt={'1.5em'}  >
         <Box>
           <Text textAlign={'left'} pl={'3em'} fontSize={'4xl'} pb={'0.5em'}>About</Text>
           <Box w={'90%'} h={'2px'} ml={'5.4em'} bg='white'></Box>
@@ -130,7 +129,7 @@ function App() {
           </Flex>
         </Box>
         <Box id='past-experience'>
-          <Text textAlign={'left'} pl={'3em'} fontSize={'4xl'} pb={'0.5em'} mt={'5em'}>Past Experience</Text>
+          <Text textAlign={'left'} pl={'3em'} fontSize={'4xl'} pb={'0.5em'} mt={'2.5em'}>Past Experience</Text>
           <Box w={'90%'} h={'2px'} ml={'5.4em'} bg='white'></Box>
           <Box w={'90%'} h={'2px'} ml={'5.4em'} bg='black'></Box>
         </Box>

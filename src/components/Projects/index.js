@@ -59,7 +59,7 @@ function Projects() {
               </div>
               <div className="project-tech">
                 <img src={react} alt="tech logo" />
-                <div>React</div>
+                <div>React.js</div>
               </div>
             </div>
             <div className="project-techs-bottom">
@@ -89,7 +89,7 @@ function Projects() {
             <img src="https://imgur.com/kc1SbA6.png" alt="project page" />
           </div>
           <div className="project-description">
-          Fark2Fork is a site where people can buy locally grown produce from
+          Farm2Fork is a site where people can buy locally grown produce from
           farmers who have excess goods to share.
           </div>
           <div className="project-links">
@@ -201,6 +201,10 @@ function Projects() {
               <div className="project-tech goodTunes-tech">
                 <img src={css} alt="tech logo" />
                 <div>CSS3</div>
+              </div>
+              <div className="project-tech goodTunes-tech">
+                <img src={postgresql} alt="tech logo" />
+                <div>PostgreSQL</div>
               </div>
             </div>
           </div>
