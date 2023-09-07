@@ -17,13 +17,12 @@ function Projects() {
         {/* SnkrMrkt CARD */}
         <div className="project-card snkr-mrkt-card">
           <div className="project-image snkr-mrkt-image">
-            <div className="project-title beachitt-title">Snkr Mrkt</div>
-            {/* <img src={netsIcon} alt="project" /> */}
+            <img src="https://imgur.com/KOgkPYD.png" alt="project" />
           </div>
-          <div className="project-page">
+          <div className="project-page snkr-mrkt-page">
             <img src={"https://i.imgur.com/nWhSavf.png"} alt="project page" />
           </div>
-          <div className="project-description">
+          <div className="project-description snkr-mrkt-description">
           We are a team of sneaker enthusiasts who are passionate about bringing the best selection of sneakers to our customers.
           </div>
           <div className="project-links">
@@ -81,14 +80,13 @@ function Projects() {
 
         {/* Spud-Hub Card */}
         <div className="project-card">
-          <div className="project-image">
-          <div className="project-title beachitt-title">Farm2Fork</div>
-            {/* <img src="https://i.imgur.com/0Szj0Wh.png" alt="project" /> */}
+          <div className="project-image farm2fork-image">
+            <img src="https://imgur.com/qOywlWk.png" alt="project" />
           </div>
-          <div className="project-page">
+          <div className="project-page farm2fork-project-page">
             <img src="https://imgur.com/kc1SbA6.png" alt="project page" />
           </div>
-          <div className="project-description">
+          <div className="project-description farm2fork-description">
           Farm2Fork is a site where people can buy locally grown produce from
           farmers who have excess goods to share.
           </div>
@@ -216,12 +214,12 @@ function Projects() {
         <div className="project-card beachitt-card">
           <div className="project-image beachitt-image">
             {/* <img src="https://i.imgur.com/2y2FmRJ.png" alt="project" /> */}
-            <div className="project-title beachitt-title">Beachitt</div>
+            <img src="https://imgur.com/a9oTqbS.png" alt="project page" />
           </div>
           <div className="project-page beachitt-page">
             <img src="https://imgur.com/LZ8DYx3.png" alt="project page" />
           </div>
-          <div className="project-description">
+          <div className="project-description beachitt-description">
             Find Find your next international beach getaway.
           </div>
           <div className="project-links">
