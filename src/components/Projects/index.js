@@ -9,6 +9,11 @@ import flask from "../skill-icons/flask.png";
 import postgresql from "../skill-icons/postgresql.svg";
 import nodejs from "../skill-icons/nodejs-icon.png";
 
+import {
+  Image
+
+} from "@chakra-ui/react";
+
 function Projects() {
   return (
     <div className="projects">
@@ -70,9 +75,9 @@ function Projects() {
                 <img src={express} alt="tech logo" />
                 <div>Express</div>
               </div>
-              <div className="project-tech flask-tech">
-                <img src={css} alt="tech logo" />
-                <div>CSS</div>
+              <div className="project-tech ">
+              <Image src="https://devicon-website.vercel.app/api/amazonwebservices/original-wordmark.svg"></Image>
+                <div>AWS</div>
               </div>
             </div>
           </div>
@@ -112,13 +117,17 @@ function Projects() {
           </div>
           <div className="project-techs">
             <div className="project-techs-top">
-              <div className="project-tech js-tech">
+              {/* <div className="project-tech js-tech">
                 <img src={js} alt="tech logo" />
                 <div>JavaScript</div>
-              </div>
+              </div> */}
               <div className="project-tech">
                 <img src={python} alt="tech logo" />
                 <div>Python</div>
+              </div>
+              <div className="project-tech flask-tech">
+                <img src={flask} alt="tech logo" />
+                <div>Flask</div>
               </div>
               <div className="project-tech">
                 <img src={react} alt="tech logo" />
@@ -133,10 +142,6 @@ function Projects() {
               <div className="project-tech">
                 <img src={css} alt="tech logo" />
                 <div>CSS3</div>
-              </div>
-              <div className="project-tech flask-tech">
-                <img src={flask} alt="tech logo" />
-                <div>Flask</div>
               </div>
             </div>
           </div>
