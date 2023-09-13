@@ -87,7 +87,10 @@ function App() {
                 Hi, my name is Chrsitian Brown.
               </Text>
                <Text fontSize={'5xl'} w={'80%'}  >
-                 I'm a Software Engineer from Sacrmaento, CA.
+                 I'm a Software Engineer from Sacramento, CA.
+              </Text>
+               <Text fontSize={'xl'} w={'80%'}  >
+                (Best viewed on Google Chrome)
               </Text>
               <Flex justify={'center'} align={'center'} pt={'1em'}>
                 <Link href="https://github.com/chrisbh4">
@@ -116,7 +119,7 @@ function App() {
           <Box w={'90%'} h={'2px'} ml={'5.4em'} bg='black'></Box>
         </Box>
           <Flex justify='center' align={'center'} fontSize={'2xl'}>
-            <Box w={'35%'} pt={'3em'} pb={'1.5em'}>
+            <Box w={'35%'} pt={'1.5em'} pb={'1.5em'}>
               <Text>Before deep diving into software development, I attended Bacone College in Oklahoma on a basketball scholarship.
                 During my free time I enjoy playing basketball, going to the gym, and leveling up my coding skills
               </Text>

@@ -28,7 +28,7 @@ function Projects() {
             <img src={"https://i.imgur.com/nWhSavf.png"} alt="project page" />
           </div>
           <div className="project-description snkr-mrkt-description">
-          We are a team of sneaker enthusiasts who are passionate about bringing the best selection of sneakers to our customers.
+           Bringing the best selection of sneakers to our customers.
           </div>
           <div className="project-links">
             <a href="http://snkr-mrkt.fly.dev">
@@ -67,16 +67,16 @@ function Projects() {
               </div>
             </div>
             <div className="project-techs-bottom">
-              <div className="project-tech">
+              <div className="project-tech snkr-mrkt-tech">
                 <img src={postgresql} alt="tech logo" />
                 <div>PostgreSQL</div>
               </div>
               <div className="project-tech">
-                <img src={express} alt="tech logo" />
+                <img src="https://devicon-website.vercel.app/api/express/original.svg?color=%23FFFFFF" alt="tech logo" />
                 <div>Express</div>
               </div>
               <div className="project-tech ">
-              <Image src="https://devicon-website.vercel.app/api/amazonwebservices/original-wordmark.svg"></Image>
+              <Image src="https://devicon-website.vercel.app/api/amazonwebservices/original.svg?color=%23FBFBFB"></Image>
                 <div>AWS</div>
               </div>
             </div>
@@ -84,16 +84,15 @@ function Projects() {
         </div>
 
         {/* Spud-Hub Card */}
-        <div className="project-card">
-          <div className="project-image farm2fork-image">
-            <img src="https://imgur.com/qOywlWk.png" alt="project" />
+        <div className="project-card spudhub-card">
+          <div className="project-image spudhub-image">
+            <img src="https://imgur.com/txChmJg.png" alt="project" />
           </div>
-          <div className="project-page farm2fork-project-page">
+          <div className="project-page spudhub-project-page">
             <img src="https://imgur.com/kc1SbA6.png" alt="project page" />
           </div>
-          <div className="project-description farm2fork-description">
-          Farm2Fork is a site where people can buy locally grown produce from
-          farmers who have excess goods to share.
+          <div className="project-description spudhub-description">
+          Locally grown produce from farmers who have excess goods to share.
           </div>
           <div className="project-links">
             <a href="https://spud-hub.fly.dev">
@@ -157,7 +156,7 @@ function Projects() {
             <img src="https://imgur.com/Q4KHyIT.png" alt="project page" />
           </div>
           <div className="project-description goodTunes-description">
-            Discover your new favorite playlists and create your own.
+            Discover your next favorite playlists and create your own.
           </div>
           <div className="project-links goodTunes-links">
             <a href="https://good-tunes.herokuapp.com">
@@ -219,7 +218,7 @@ function Projects() {
         <div className="project-card beachitt-card">
           <div className="project-image beachitt-image">
             {/* <img src="https://i.imgur.com/2y2FmRJ.png" alt="project" /> */}
-            <img src="https://imgur.com/a9oTqbS.png" alt="project page" />
+            <img src="https://imgur.com/w5U7FoB.png" alt="project page" />
           </div>
           <div className="project-page beachitt-page">
             <img src="https://imgur.com/LZ8DYx3.png" alt="project page" />
@@ -232,7 +231,7 @@ function Projects() {
               Live App
               <i class="fas fa-globe"></i>
             </a>
-            <a href="https://github.com/owiwamasa/beachitt-surfer-proj">
+            <a href="https://github.com/chrisbh4/beachitt">
               GitHub
               <i className="fab fa-github" />
             </a>
