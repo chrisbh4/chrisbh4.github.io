@@ -10,22 +10,17 @@ import {
   Center,
   Image,
   Icon,
-  List,
   ListItem,
-  OrderedList,
   UnorderedList,
 } from '@chakra-ui/react';
 import {
   FaGithub,
-  FaGoogle,
   FaLinkedin,
   FaAngellist,
-  FaIdCardAlt,
   FaIdBadge
 } from "react-icons/fa";
 
 import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
 import { EmailIcon } from '@chakra-ui/icons';
 import Projects from './components/Projects';
 
@@ -234,6 +229,7 @@ function App() {
             <Image boxSize={'100px'} mr={'15px'} src="https://devicon-website.vercel.app/api/git/original.svg"></Image>
             <Image boxSize={'100px'} mr={'15px'} src="https://devicon-website.vercel.app/api/github/original-wordmark.svg"></Image>
             <Image boxSize={'100px'} mr={'15px'} src="https://devicon-website.vercel.app/api/heroku/original.svg"></Image>
+            <Image boxSize={'100px'} mr={'15px'} src="https://devicon-website.vercel.app/api/google/original.svg"></Image>
           </Center>
           <Flex></Flex>
         </Box>
