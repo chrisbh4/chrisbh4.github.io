@@ -1,11 +1,12 @@
 import React from 'react';
+import '@fontsource/kanit/500.css';
+import '@fontsource/rajdhani';
 import {
   ChakraProvider,
   Box,
   Text,
   Link,
   VStack,
-  theme,
   Flex,
   Center,
   Image,
@@ -25,15 +26,6 @@ import { EmailIcon } from '@chakra-ui/icons';
 import Projects from './components/Projects';
 
 
-/*
-Nav-bg color: #393e61
-
-Icons:
-ExpressJS
-Redux-React
-
-*/
-
 function App() {
 
   function handleClick(event, id) {
@@ -49,9 +41,9 @@ function App() {
 }
 
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider >
       {/*Main Body */}
-      <Box textAlign="center" fontSize="xl" fontFamily={'Kanit'}>
+      <Box textAlign="center" fontSize="xl" fontFamily={'Rajdhani'} >
         <Box id='nav' bg={"#393e61"} w="full" h="6em" position={'fixed'} zIndex={1} >
           <Flex justify={"space-between"} align={'center'} h={'full'} color={'white'}>
             <Text fontSize="5xl" ml={'8%'}>Christian Brown </Text>
@@ -84,9 +76,9 @@ function App() {
                <Text fontSize={'5xl'} w={'80%'}  >
                  I'm a Software Engineer from Sacramento, CA.
               </Text>
-               <Text fontSize={'xl'} w={'80%'}  >
+               {/* <Text fontSize={'xl'} w={'80%'}  >
                 (Best viewed on Google Chrome)
-              </Text>
+              </Text> */}
               <Flex justify={'center'} align={'center'} pt={'1em'}>
                 <Link href="https://github.com/chrisbh4">
                   <Icon as={FaGithub} boxSize={12} mr={'1em'} />
@@ -113,13 +105,14 @@ function App() {
           <Box w={'90%'} h={'2px'} ml={'5.4em'} bg='white'></Box>
           <Box w={'90%'} h={'2px'} ml={'5.4em'} bg='black'></Box>
         </Box>
-          <Flex justify='center' align={'center'} fontSize={'2xl'}>
-            <Box w={'35%'} pt={'1.5em'} pb={'1.5em'}>
+          <Flex justify='center' align={'center'} fontSize={'2xl'} pt={'1.5em'}>
+            <Box w={'35%'}  pb={'1.5em'}>
               <Text>Before deep diving into software development, I attended Bacone College in Oklahoma on a basketball scholarship.
                 During my free time I enjoy playing basketball, going to the gym, and leveling up my coding skills
               </Text>
             </Box>
-            <Box w={'35%'} pt={'3em'}>
+            {/* <Box w={'35%'} pt={'3em'}> */}
+            <Box w={'35%'} pl={'1em'}>
               <Text>Ever since I've built my first full stack application my passion for code has sky rocketed. I've always enjoyed working with new tech or
                     just build new apps ideas that just randomly pop into my head. I thrive working in a fast-pace enviorment that requires goal oriented communication.
               </Text>
