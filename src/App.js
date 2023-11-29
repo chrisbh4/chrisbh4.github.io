@@ -135,7 +135,7 @@ function App() {
 
             </Box>
             <Box fontSize={'25px'} >
-                <Box w='90%' fontSize={'3xl'} mr={'10em'} mt={'1em'} textAlign={'left'}>
+                <Box w='90%' fontSize={'3xl'} mr={'10em'} mt={'2.2em'} textAlign={'left'}>
                   Technologies : Elixir, Phoenix Liveview, JavaScript, Ruby, Go, Postgres, Docker, Flyctl, HTML5, TailwindCSS, Git, Github, Slack
                 </Box>
               <UnorderedList id='experience-1' >
@@ -169,7 +169,7 @@ function App() {
 
             </Box>
             <Box fontSize={'25px'} p={'2em'} >
-                <Box w='90%' fontSize={'3xl'} mr={'9em'} textAlign={'left'} >
+                <Box w='90%' fontSize={'3xl'} mr={'9em'} textAlign={'left'} mt={'0.5em'} >
                   Technologies : Elixir, Phoenix Liveview, Ruby, JavaScript, Postgres, Docker, Flyctl, HTML5, TailwindCSS, Git, Github, Slack
                 </Box>
               <UnorderedList id='experience-2' mt={'1em'} textAlign={'left'} >
