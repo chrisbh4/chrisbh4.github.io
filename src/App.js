@@ -52,7 +52,7 @@ function App() {
               <Link href='#past-experience' style={{ textDecoration: "none" }} onClick={(e) => handleClick(e, 'past-experience')}  fontWeight={'medium'} fontSize={'2xl'} ml={'5%'} wrap>Past Experiences</Link>
               <Link href='#skills' style={{ textDecoration: "none" }} onClick={(e) => handleClick(e, 'skills')}  fontWeight={'medium'} fontSize={'2xl'} ml={'5%'}>Skills</Link>
               <Link href='#projects' style={{ textDecoration: "none" }} onClick={(e) => handleClick(e, 'projects')}  fontWeight={'medium'} fontSize={'2xl'} ml={'5%'}>Projects</Link>
-              <Link href='https://drive.google.com/file/d/10iVaTl6GruPgUoHKYu9fWN1qUFQWv6X-/view?usp=sharing' style={{ textDecoration: "none" }}
+              <Link href='https://drive.google.com/file/d/1vijl5ZY63l5xTTTnOtNXC_BzYgb1a054/view?usp=sharing' style={{ textDecoration: "none" }}
                     fontWeight={'medium'} fontSize={'2xl'} ml={'5%'}
                 >Resume
               </Link>
@@ -89,7 +89,7 @@ function App() {
                 <Link href="https://wellfound.com/profile/edit/overview">
                   <Icon as={FaAngellist} boxSize={12} mr={'1em'} />
                 </Link>
-                <Link href="https://drive.google.com/file/d/10iVaTl6GruPgUoHKYu9fWN1qUFQWv6X-/view?usp=sharing">
+                <Link href="https://drive.google.com/file/d/1vijl5ZY63l5xTTTnOtNXC_BzYgb1a054/view?usp=sharing">
                   <Icon as={FaIdBadge} boxSize={12} mr={'1em'} />
                 </Link>
                 <Link href="mailto:chrismbh4@gmail.com">
@@ -107,13 +107,13 @@ function App() {
         </Box>
           <Flex justify='center' align={'center'} fontSize={'2xl'} pt={'1.5em'}>
             <Box w={'35%'}  pb={'1.5em'}>
-              <Text>Before deep diving into software development, I attended Bacone College in Oklahoma on a basketball scholarship.
-                During my free time I enjoy playing basketball, going to the gym, and leveling up my coding skills
+              <Text align={'start'}>Before deep diving into software development, I attended Bacone College in Oklahoma on a basketball scholarship.
+                During my free time I enjoy playing basketball, cooking new recipes, and leveling up my coding skills.
               </Text>
             </Box>
             {/* <Box w={'35%'} pt={'3em'}> */}
             <Box w={'35%'} pl={'1em'}>
-              <Text>Ever since I've built my first full stack application my passion for code has sky rocketed. I've always enjoyed working with new tech or
+              <Text align={'start'}>Ever since I've built my first full stack application my passion for code has sky rocketed. I've always enjoyed working with new tech or
                     just build new apps ideas that just randomly pop into my head. I thrive working in a fast-pace enviorment that requires goal oriented communication.
               </Text>
             </Box>
@@ -129,14 +129,14 @@ function App() {
             <Box w='full'>
               <Box mt='3em' mr={'12em'}>
                 <Text fontSize={'4xl'}>Full Stack Engineer </Text>
-                <Text fontSize={'4xl'} mr={'5em'}>@ Fly.io</Text>
-                <Text fontSize={'xl'} mt={'1em'} mr={'6em'}>August 2022 - Current</Text>
+                <Text fontSize={'4xl'} mr={'4.9em'}>@ Fly.io</Text>
+                <Text fontSize={'xl'} mt={'1em'} mr={'5em'}>August 2022 - Current</Text>
               </Box>
 
             </Box>
             <Box fontSize={'25px'} >
                 <Box w='90%' fontSize={'3xl'} mr={'10em'} mt={'1em'} textAlign={'left'}>
-                  Technologies : Elixir, Phoenix Liveview, Go, Ruby, Rails, Postgres, Docker, Flyctl, HTML5, TailwindCSS, Git, Github, Slack
+                  Technologies : Elixir, Phoenix Liveview, JavaScript, Ruby, Go, Postgres, Docker, Flyctl, HTML5, TailwindCSS, Git, Github, Slack
                 </Box>
               <UnorderedList id='experience-1' >
                 <ListItem w='83%' mt={'1em'} mr={'1em'} textAlign={'left'}>
@@ -144,7 +144,7 @@ function App() {
                 </ListItem>
                 <ListItem w='90%' mt={'1em'} textAlign={'left'}>
                   Restructured and implemented an upgraded OAuth authentication system, enhancing application security and improving
-                  user authentication experience by 50%.
+                  user authentication experience by 30%.
                 </ListItem>
                 <ListItem w='90%' mt={'1em'}textAlign={'left'}>
                   Collaborated with frontend and backend teams to architect and implement RESTful and GraphQL APIs,
@@ -163,14 +163,14 @@ function App() {
               <Box mt='3em' mr={'12em'}>
               {/* <Text fontSize={'4xl'} textAlign={'start'}>Full Stack Engineer <br></br>Intern @ Fly.io </Text> */}
                 <Text fontSize={'4xl'}>Full Stack Engineer </Text>
-                <Text fontSize={'4xl'} mr={'2.6em'}>Intern @ Fly.io</Text>
-                <Text fontSize={'xl'} mt={'1em'} mr={'5em'}>May 2022 - August 2022</Text>
+                <Text fontSize={'4xl'} mr={'2em'}>Intern @ Fly.io</Text>
+                <Text fontSize={'xl'} mt={'1em'} mr={'4em'}>May 2022 - August 2022</Text>
               </Box>
 
             </Box>
             <Box fontSize={'25px'} p={'2em'} >
                 <Box w='90%' fontSize={'3xl'} mr={'9em'} textAlign={'left'} >
-                  Technologies : Elixir, Phoenix Liveview, Postgres, Docker, Flyctl, HTML5, TailwindCSS, Git, Github, Slack
+                  Technologies : Elixir, Phoenix Liveview, Ruby, JavaScript, Postgres, Docker, Flyctl, HTML5, TailwindCSS, Git, Github, Slack
                 </Box>
               <UnorderedList id='experience-2' mt={'1em'} textAlign={'left'} >
                 <ListItem w='85%' >
@@ -263,7 +263,7 @@ function App() {
             </VStack>
             <VStack>
               <Text fontSize={'1.4em'} fontWeight={'bold'}>Resume</Text>
-              <Link href="https://drive.google.com/file/d/10iVaTl6GruPgUoHKYu9fWN1qUFQWv6X-/view?usp=sharing">
+              <Link href="https://drive.google.com/file/d/1vijl5ZY63l5xTTTnOtNXC_BzYgb1a054/view?usp=sharing">
                 <Icon as={FaIdBadge} boxSize={9} mt={'1em'} />
               </Link>
             </VStack>

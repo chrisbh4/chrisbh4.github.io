@@ -155,14 +155,14 @@
 }
 
 .spudhub-image  img {
-  width: 180px;
+  /* width: 180px; */
   height: auto;
   margin-top: 15px;
 
 }
 
 .spudhub-description {
-  margin-top: -10px;
+  margin-top: -5px;
 }
 
 .beachitt-image img {

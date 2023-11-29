@@ -27,7 +27,8 @@ function Projects() {
         {/* Spud-Hub Card */}
         <div className="project-card spudhub-card">
           <div className="project-image spudhub-image">
-            <img src="https://imgur.com/txChmJg.png" alt="project" />
+            {/* <img src="https://imgur.com/txChmJg.png" alt="project" /> */}
+            <img src="https://imgur.com/Vo3nCh3.png" alt="project" />
           </div>
           <div className="project-page spudhub-project-page">
             <img src="https://imgur.com/kc1SbA6.png" alt="project page" />
