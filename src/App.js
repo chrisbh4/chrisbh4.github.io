@@ -106,7 +106,7 @@ function App() {
           <Box w={'90%'} h={'2px'} ml={'5.4em'} bg='black'></Box>
         </Box>
           <Flex justify='center' align={'center'} fontSize={'2xl'} pt={'1.5em'}>
-            <Box w={'35%'}  pb={'1.5em'}>
+            <Box w={'35%'}  pb={'3em'}>
               <Text align={'start'}>Before deep diving into software development, I attended Bacone College in Oklahoma on a basketball scholarship.
                 During my free time I enjoy playing basketball, cooking new recipes, and leveling up my coding skills.
               </Text>
