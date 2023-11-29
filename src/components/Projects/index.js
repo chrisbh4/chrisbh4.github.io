@@ -222,7 +222,6 @@ function Projects() {
         {/* Beachitt CARD */}
         <div className="project-card beachitt-card">
           <div className="project-image beachitt-image">
-            {/* <img src="https://i.imgur.com/2y2FmRJ.png" alt="project" /> */}
             <img src="https://imgur.com/w5U7FoB.png" alt="project page" />
           </div>
           <div className="project-page beachitt-page">
