@@ -111,7 +111,7 @@ function Projects() {
             <div className="project-features-title">Features List</div>
             <Box textAlign={'start'} pl={'2em'}>
                 <Text pt={'1em'}>- Sneaker listings (CRUD)</Text>
-                <Text pt={'1em'}>- Sneaker review and comment (CRUD)</Text>
+                <Text pt={'1em'}>- Sneaker reviews (CRUD)</Text>
                 <Text pt={'1em'}>- AWS S3 Image uploads</Text>
                 <Text pt={'1em'}>- Shopping Cart (CRUD)</Text>
                 <Text pt={'1em'}>- Search Bar</Text>
