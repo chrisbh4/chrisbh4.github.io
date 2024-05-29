@@ -245,8 +245,8 @@ function Projects() {
               <Box textAlign={'start'} pl={'4em'}>
                 <Text>- Google Maps API</Text>
                 <Text pt={'1em'}>- AWS S3 Image uploads</Text>
-                <Text pt={'1em'}>- CRUD for listings</Text>
-                <Text pt={'1em'}>- CRUD for listing reviews</Text>
+                <Text pt={'1em'}>- Rental listings (CRUD)</Text>
+                <Text pt={'1em'}>- Rental reviews (CRUD)</Text>
               </Box>
             </div>
           </div>
