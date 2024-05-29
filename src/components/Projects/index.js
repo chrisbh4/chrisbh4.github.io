@@ -49,9 +49,9 @@ function Projects() {
           <div className="project-features-list">
             <div className="project-features-title">Features List</div>
             <Box textAlign={'start'} pl={'3em'}>
-                <Text>- Products Listings</Text>
-                <Text pt={'1em'}>- Shopping Cart</Text>
-                <Text pt={'1em'}>- Product Reviews</Text>
+                <Text>- Products Listings (CRUD)</Text>
+                <Text pt={'1em'}>- Shopping Cart (CRUD)</Text>
+                <Text pt={'1em'}>- Product Reviews (CRUD)</Text>
                 <Text pt={'1em'}>- Sign up / in with email</Text>
               </Box>
           </div>
@@ -110,11 +110,10 @@ function Projects() {
           <div className="project-features-list">
             <div className="project-features-title">Features List</div>
             <Box textAlign={'start'} pl={'2em'}>
-                {/* <Text>- StockX API</Text> */}
-                <Text pt={'1em'}>- Sneaker listings</Text>
-                <Text pt={'1em'}>- Sneaker review and comment</Text>
+                <Text pt={'1em'}>- Sneaker listings (CRUD)</Text>
+                <Text pt={'1em'}>- Sneaker review and comment (CRUD)</Text>
                 <Text pt={'1em'}>- AWS S3 Image uploads</Text>
-                <Text pt={'1em'}>- Shopping Cart</Text>
+                <Text pt={'1em'}>- Shopping Cart (CRUD)</Text>
                 <Text pt={'1em'}>- Search Bar</Text>
                 <Text pt={'1em'}>- Sign up / in with email</Text>
               </Box>
@@ -179,9 +178,9 @@ function Projects() {
             </div>
               <Box textAlign={'start'} pl={'2em'}>
                 <Text>- Create Shelves to add
-                  <Text pl={'1.2em'}>albums</Text> </Text>
+                  <Text pl={'1.2em'}>albums (CRUD)</Text> </Text>
                 <Text pt={'1em'}>- Search by artist or album</Text>
-                <Text pt={'1em'}>- Leave reviews for albums</Text>
+                <Text pt={'1em'}>- Leave reviews for albums (CRUD)</Text>
                 <Text pt={'1em'}>- Sign up / in with email</Text>
               </Box>
           </div>
