@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7389d2f6.css",
+    "main.js": "/static/js/main.66b91332.js",
+    "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
+    "static/media/flask.png": "/static/media/flask.31c2a54ad2e338c48ff6.png",
+    "static/media/rajdhani-devanagari-400-normal.woff2": "/static/media/rajdhani-devanagari-400-normal.6c9e66e639fb808aad84.woff2",
+    "static/media/rajdhani-devanagari-400-normal.woff": "/static/media/rajdhani-devanagari-400-normal.8b68e16985b8ddab3239.woff",
+    "static/media/kanit-latin-ext-500-normal.woff2": "/static/media/kanit-latin-ext-500-normal.5ff6f78d034914dab5d8.woff2",
+    "static/media/kanit-latin-500-normal.woff2": "/static/media/kanit-latin-500-normal.63d399e480c6301efad7.woff2",
+    "static/media/rajdhani-latin-400-normal.woff2": "/static/media/rajdhani-latin-400-normal.7a7983e943008b42789d.woff2",
+    "static/media/kanit-latin-500-normal.woff": "/static/media/kanit-latin-500-normal.c15e157d4fdd030aee8b.woff",
+    "static/media/kanit-thai-500-normal.woff2": "/static/media/kanit-thai-500-normal.28fc73e3d1a1c7360bf3.woff2",
+    "static/media/kanit-latin-ext-500-normal.woff": "/static/media/kanit-latin-ext-500-normal.97942b533e811be1d0fc.woff",
+    "static/media/rajdhani-latin-ext-400-normal.woff2": "/static/media/rajdhani-latin-ext-400-normal.d920ea8ee9c011bae86d.woff2",
+    "static/media/rajdhani-latin-400-normal.woff": "/static/media/rajdhani-latin-400-normal.f91233009b8248d846f5.woff",
+    "static/media/kanit-vietnamese-500-normal.woff2": "/static/media/kanit-vietnamese-500-normal.55504bc23b76cd60ced4.woff2",
+    "static/media/rajdhani-latin-ext-400-normal.woff": "/static/media/rajdhani-latin-ext-400-normal.e2bf801e950e34d94964.woff",
+    "static/media/postgresql.svg": "/static/media/postgresql.70b8ad542b0c0b034804efe8b630fe0f.svg",
+    "static/media/kanit-thai-500-normal.woff": "/static/media/kanit-thai-500-normal.ab66ca86a86aa2a441fa.woff",
+    "static/media/kanit-vietnamese-500-normal.woff": "/static/media/kanit-vietnamese-500-normal.572de782c5e4b8833159.woff",
+    "static/media/redux.svg": "/static/media/redux.76b7a8edbbf9267ae168a1a7332dc9ad.svg",
+    "static/media/react.svg": "/static/media/react.1520bd67b9711ed91ace46b169bc2491.svg",
+    "static/media/python.svg": "/static/media/python.79c5633cbe851c4234b9917f01369efc.svg",
+    "static/media/express.svg": "/static/media/express.17d6aefdd7235ab2cf8881c1b03ad312.svg",
+    "index.html": "/index.html",
+    "static/media/javascript.svg": "/static/media/javascript.218515feb76f692771fe00cfeadc46c8.svg",
+    "static/media/css.svg": "/static/media/css.84e425077fc2d43f98cabb0d566ed8b1.svg",
+    "main.7389d2f6.css.map": "/static/css/main.7389d2f6.css.map",
+    "main.66b91332.js.map": "/static/js/main.66b91332.js.map",
+    "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7389d2f6.css",
+    "static/js/main.66b91332.js"
+  ]
+}
