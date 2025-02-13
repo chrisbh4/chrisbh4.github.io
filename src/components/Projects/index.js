@@ -92,7 +92,7 @@ function Projects() {
             <img src="https://imgur.com/KOgkPYD.png" alt="project" />
           </div>
           <div className="project-page snkr-mrkt-page">
-            <img src={"https://i.imgur.com/nWhSavf.png"} alt="project page" />
+            <img src={"https://imgur.com/oOcv5cp.png"} alt="project page" />
           </div>
           <div className="project-description snkr-mrkt-description">
            Bringing the best selection of sneakers to our customers.
@@ -163,7 +163,7 @@ function Projects() {
             Discover your next favorite playlists and create your own.
           </div>
           <div className="project-links goodTunes-links">
-            <a href="https://good-tunes.herokuapp.com">
+            <a href="https://goodtunes.fly.dev">
               Live App
               <i class="fas fa-globe"></i>
             </a>
@@ -230,7 +230,7 @@ function Projects() {
             Find Find your next international beach getaway.
           </div>
           <div className="project-links">
-            <a href="https://beachitt-surfers.herokuapp.com/">
+            <a href="https://beachitt.fly.dev">
               Live App
               <i class="fas fa-globe"></i>
             </a>
