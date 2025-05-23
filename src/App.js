@@ -52,7 +52,7 @@ function App() {
               <Link href='#past-experience' style={{ textDecoration: "none" }} onClick={(e) => handleClick(e, 'past-experience')}  fontWeight={'medium'} fontSize={'2xl'} ml={'5%'} wrap>Past Experiences</Link>
               <Link href='#skills' style={{ textDecoration: "none" }} onClick={(e) => handleClick(e, 'skills')}  fontWeight={'medium'} fontSize={'2xl'} ml={'5%'}>Skills</Link>
               <Link href='#projects' style={{ textDecoration: "none" }} onClick={(e) => handleClick(e, 'projects')}  fontWeight={'medium'} fontSize={'2xl'} ml={'5%'}>Projects</Link>
-              <Link href='https://drive.google.com/file/d/1U1yJehW_R52-hgpKdnaHIkvixNRiXQgI/view?usp=sharing' style={{ textDecoration: "none" }}
+              <Link href='https://drive.google.com/file/d/1jjcvTvRAx2JS48Z5sOGADXt5JNde7aIn/view?usp=sharing' style={{ textDecoration: "none" }}
                     fontWeight={'medium'} fontSize={'2xl'} ml={'5%'}
                 >Resume
               </Link>
@@ -89,7 +89,7 @@ function App() {
                 <Link href="https://wellfound.com/profile/edit/overview">
                   <Icon as={FaAngellist} boxSize={12} mr={'1em'} />
                 </Link>
-                <Link href="https://drive.google.com/file/d/1U1yJehW_R52-hgpKdnaHIkvixNRiXQgI/view?usp=sharing">
+                <Link href="https://drive.google.com/file/d/1jjcvTvRAx2JS48Z5sOGADXt5JNde7aIn/view?usp=sharing">
                   <Icon as={FaIdBadge} boxSize={12} mr={'1em'} />
                 </Link>
                 <Link href="mailto:chrismbh4@gmail.com">
@@ -295,7 +295,7 @@ function App() {
             </VStack>
             <VStack>
               <Text fontSize={'1.4em'} fontWeight={'bold'}>Resume</Text>
-              <Link href="https://drive.google.com/file/d/1U1yJehW_R52-hgpKdnaHIkvixNRiXQgI/view?usp=sharing">
+              <Link href="https://drive.google.com/file/d/1jjcvTvRAx2JS48Z5sOGADXt5JNde7aIn/view?usp=sharing">
                 <Icon as={FaIdBadge} boxSize={9} mt={'1em'} />
               </Link>
             </VStack>
