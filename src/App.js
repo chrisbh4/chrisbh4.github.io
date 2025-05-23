@@ -119,6 +119,7 @@ function App() {
             </Box>
           </Flex>
         </Box>
+        {/*Past Experience Section */}
         <Box id='past-experience'>
           <Text textAlign={'left'} pl={'3em'} fontSize={'4xl'} pb={'0.5em'} mt={'2.5em'}>Past Experience</Text>
           <Box w={'90%'} h={'2px'} ml={'5.4em'} bg='white'></Box>
@@ -156,13 +157,13 @@ function App() {
             </Box>
           </Flex>
         </Box>
-        <Box id='past-experience-2' h={'520px'} w='full'>
+        <Box id='past-experience-2' h={'full'} w='full' mt={'1em'}>
           <Flex justify={'space-evenly'} >
-            <Box w='full'>
+            <Box w='70%'>
               <Box mt='3em' mr={'12em'}>
                 <Text fontSize={'4xl'}>Full Stack Engineer </Text>
                 <Text fontSize={'4xl'} mr={'4.9em'}>@ Fly.io</Text>
-                <Text fontSize={'xl'} mt={'1em'} mr={'5em'}>August 2022 - September 2025</Text>
+                <Text fontSize={'xl'} mt={'1em'} mr={'1.5em'}>August 2022 - September 2025</Text>
               </Box>
             </Box>
             <Box fontSize={'25px'} >
@@ -188,7 +189,7 @@ function App() {
             </Box>
           </Flex>
         </Box>
-        <Box id='past-experience-3' h={'600px'} w='full' mt={'10em'}>
+        <Box id='past-experience-3' h={'600px'} w='full' mt={'1em'}>
           <Flex justify={'space-evenly'} >
             <Box w='full'>
               <Box mt='3em' mr={'12em'}>
