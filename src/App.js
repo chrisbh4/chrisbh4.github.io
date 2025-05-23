@@ -124,15 +124,46 @@ function App() {
           <Box w={'90%'} h={'2px'} ml={'5.4em'} bg='white'></Box>
           <Box w={'90%'} h={'2px'} ml={'5.4em'} bg='black'></Box>
         </Box>
-        <Box id='past-experience-1' h={'520px'} w='full'>
+        <Box id='past-experience-1' h={'full'} w='full'>
+          <Flex justify={'space-evenly'} >
+            <Box w='full'>
+              <Box mt='3em' mr={'12em'}>
+                <Text fontSize={'4xl'}>Software Engineer </Text>
+                <Text fontSize={'4xl'} mr={'2.8em'}>@ Freelance</Text>
+                <Text fontSize={'xl'} mt={'1em'} mr={'5em'}>January 2020 - current</Text>
+              </Box>
+            </Box>
+            <Box fontSize={'25px'} >
+                <Box w='90%' fontSize={'3xl'} mr={'10em'} mt={'2.2em'} textAlign={'left'}>
+                  Technologies : JavaScript, TypeScript, React, Next.js, Tailwind CSS, Node.js, GraphQL, Vercel, Microsoft Azure, Docker, MS SQL Server, GitHub
+
+                </Box>
+              <UnorderedList id='experience-1' >
+                <ListItem w='83%' mt={'1em'} mr={'1em'} textAlign={'left'}>
+                  Architected scalable full-stack solutions using JavaScript, TypeScript, REST and GraphQL APIs, reducing API response times by up to 40%.
+                </ListItem>
+                <ListItem w='90%' mt={'1em'} textAlign={'left'}>
+                  Deployed applications to Vercel and Azure, utilizing CI/CD pipelines and environment configs to streamline releases and maintain 99.9% uptime.
+                </ListItem>
+                <ListItem w='90%' mt={'1em'}textAlign={'left'}>
+                  Delivered production-ready interfaces styled with Tailwind CSS, ensuring mobile-first responsiveness and WCAG 2.1 accessibility compliance.
+                </ListItem>
+                <ListItem w='83%' mt={'1em'}textAlign={'left'}>
+                  Consulted on technical architecture, tooling, and best practices for mid-sized engineering teams to ensure scalable and maintainable codebases.
+                </ListItem>
+                
+              </UnorderedList>
+            </Box>
+          </Flex>
+        </Box>
+        <Box id='past-experience-2' h={'520px'} w='full'>
           <Flex justify={'space-evenly'} >
             <Box w='full'>
               <Box mt='3em' mr={'12em'}>
                 <Text fontSize={'4xl'}>Full Stack Engineer </Text>
                 <Text fontSize={'4xl'} mr={'4.9em'}>@ Fly.io</Text>
-                <Text fontSize={'xl'} mt={'1em'} mr={'5em'}>August 2022 - Current</Text>
+                <Text fontSize={'xl'} mt={'1em'} mr={'5em'}>August 2022 - September 2025</Text>
               </Box>
-
             </Box>
             <Box fontSize={'25px'} >
                 <Box w='90%' fontSize={'3xl'} mr={'10em'} mt={'2.2em'} textAlign={'left'}>
@@ -157,7 +188,7 @@ function App() {
             </Box>
           </Flex>
         </Box>
-        <Box id='past-experience-2' h={'600px'} w='full' mt={'10em'}>
+        <Box id='past-experience-3' h={'600px'} w='full' mt={'10em'}>
           <Flex justify={'space-evenly'} >
             <Box w='full'>
               <Box mt='3em' mr={'12em'}>
