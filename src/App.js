@@ -105,19 +105,18 @@ function App() {
           <Box w={'90%'} h={'2px'} ml={'5.4em'} bg='white'></Box>
           <Box w={'90%'} h={'2px'} ml={'5.4em'} bg='black'></Box>
         </Box>
-          <Flex justify='center' align={'center'} fontSize={'2xl'} pt={'1.5em'}>
-            <Box w={'35%'}  pb={'3em'}>
+          <VStack spacing={6} align='center' fontSize={'2xl'} pt={'1.5em'} px={'25em'}>
+            <Box w={'80%'}>
               <Text align={'start'}>Before deep diving into software development, I attended Bacone College in Oklahoma on a basketball scholarship.
                 During my free time I enjoy playing basketball, cooking new recipes, and leveling up my coding skills.
               </Text>
             </Box>
-            {/* <Box w={'35%'} pt={'3em'}> */}
-            <Box w={'35%'} pl={'1em'}>
+            <Box w={'80%'}>
               <Text align={'start'}>Ever since I've built my first full stack application my passion for code has sky rocketed. I've always enjoyed working with new tech or
                     just build new apps ideas that just randomly pop into my head. I thrive working in a fast-pace enviorment that requires goal oriented communication.
               </Text>
             </Box>
-          </Flex>
+          </VStack>
         </Box>
         {/*Past Experience Section */}
         <Box id='past-experience'>
