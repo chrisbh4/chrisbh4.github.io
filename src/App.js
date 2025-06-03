@@ -12,7 +12,7 @@ import {
   Image,
   Icon,
   ListItem,
-  UnorderedList,
+  UnorderedList
 } from '@chakra-ui/react';
 import {
   FaGithub,
@@ -128,7 +128,7 @@ function App() {
 
         {/* Experience 1 */}
         <Box id='past-experience-1' w='full' py={'3em'}>
-          <Flex maxW="1200px" mx="auto" align="flex-start" gap={8}>
+          <Flex maxW="1900px" mx="auto" align="flex-start" gap={"20em"}>
             <Box minW="340px" maxW="340px" pr={8}>
               <Text fontSize={'4xl'}>Software Engineer</Text>
               <Text fontSize={'4xl'}>@ Freelance</Text>
@@ -138,7 +138,7 @@ function App() {
               <Box fontSize={'3xl'} mb={2}>
                 Technologies: JavaScript, TypeScript, React, Next.js, Tailwind CSS, Node.js, GraphQL, Vercel, Microsoft Azure, Docker, MS SQL Server, GitHub
               </Box>
-              <UnorderedList spacing={3}>
+              <UnorderedList spacing={3} textAlign={'start'}>
                 <ListItem>
                   Architected scalable full-stack solutions using JavaScript, TypeScript, REST and GraphQL APIs, reducing API response times by up to 40%.
                 </ListItem>
@@ -158,7 +158,7 @@ function App() {
 
         {/* Experience 2 */}
         <Box id='past-experience-2' w='full' py={'3em'}>
-          <Flex maxW="1200px" mx="auto" align="flex-start" gap={8}>
+          <Flex maxW="1900px" mx="auto" align="flex-start" gap={"20em"}>
             <Box minW="340px" maxW="340px" pr={8}>
               <Text fontSize={'4xl'}>Full Stack Engineer</Text>
               <Text fontSize={'4xl'}>@ Fly.io</Text>
@@ -168,7 +168,7 @@ function App() {
               <Box fontSize={'3xl'} mb={2}>
                 Technologies: Elixir, Phoenix Liveview, JavaScript, Ruby, Go, Postgres, Docker, Flyctl, HTML5, TailwindCSS, Git, Github, Slack
               </Box>
-              <UnorderedList spacing={3}>
+              <UnorderedList spacing={3} textAlign={'start'}>
                 <ListItem>
                   Architected complex database schemas and queries in PostgreSQL, ensuring data integrity and efficient data retrieval
                 </ListItem>
@@ -188,7 +188,7 @@ function App() {
 
         {/* Experience 3 */}
         <Box id='past-experience-3' w='full' py={'3em'}>
-          <Flex maxW="1200px" mx="auto" align="flex-start" gap={8}>
+          <Flex maxW="1900px" mx="auto" align="flex-start" gap={"20em"}>
             <Box minW="340px" maxW="340px" pr={8}>
               <Text fontSize={'4xl'}>Full Stack Engineer</Text>
               <Text fontSize={'4xl'}>Intern @ Fly.io</Text>
@@ -196,9 +196,9 @@ function App() {
             </Box>
             <Box flex={1}>
               <Box fontSize={'3xl'} mb={2}>
-                Technologies: Elixir, Phoenix Liveview, Ruby, JavaScript, Postgres, Docker, Flyctl, HTML5, TailwindCSS, Git, Github, Slack
+                Technologies: Elixir, Phoenix Liveview, JavaScript, Ruby, Go, Postgres, Docker, Flyctl, HTML5, TailwindCSS, Git, Github, Slack
               </Box>
-              <UnorderedList spacing={3}>
+              <UnorderedList spacing={3} textAlign={'start'}>
                 <ListItem>
                   Leveraged Phoenix LiveView to create real-time, interactive web applications, enhancing user engagement and reducing the need for client-side JavaScript.
                 </ListItem>
