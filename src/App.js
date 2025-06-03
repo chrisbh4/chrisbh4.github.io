@@ -125,97 +125,88 @@ function App() {
           <Box w={'90%'} h={'2px'} ml={'5.4em'} bg='white'></Box>
           <Box w={'90%'} h={'2px'} ml={'5.4em'} bg='black'></Box>
         </Box>
-        <Box id='past-experience-1' h={'full'} w='full'>
-          <Flex justify={'space-evenly'} >
-            <Box w='full'>
-              <Box mt='3em' mr={'12em'}>
-                <Text fontSize={'4xl'}>Software Engineer </Text>
-                <Text fontSize={'4xl'} mr={'2.8em'}>@ Freelance</Text>
-                <Text fontSize={'xl'} mt={'1em'} mr={'5em'}>January 2020 - current</Text>
-              </Box>
-            </Box>
-            <Box fontSize={'25px'} >
-                <Box w='90%' fontSize={'3xl'} mr={'10em'} mt={'2.2em'} textAlign={'left'}>
-                  Technologies : JavaScript, TypeScript, React, Next.js, Tailwind CSS, Node.js, GraphQL, Vercel, Microsoft Azure, Docker, MS SQL Server, GitHub
 
-                </Box>
-              <UnorderedList id='experience-1' >
-                <ListItem w='83%' mt={'1em'} mr={'1em'} textAlign={'left'}>
+        {/* Experience 1 */}
+        <Box id='past-experience-1' w='full' py={'3em'}>
+          <Flex maxW="1200px" mx="auto" align="flex-start" gap={8}>
+            <Box minW="340px" maxW="340px" pr={8}>
+              <Text fontSize={'4xl'}>Software Engineer</Text>
+              <Text fontSize={'4xl'}>@ Freelance</Text>
+              <Text fontSize={'xl'} mt={'1em'}>January 2020 - current</Text>
+            </Box>
+            <Box flex={1}>
+              <Box fontSize={'3xl'} mb={2}>
+                Technologies: JavaScript, TypeScript, React, Next.js, Tailwind CSS, Node.js, GraphQL, Vercel, Microsoft Azure, Docker, MS SQL Server, GitHub
+              </Box>
+              <UnorderedList spacing={3}>
+                <ListItem>
                   Architected scalable full-stack solutions using JavaScript, TypeScript, REST and GraphQL APIs, reducing API response times by up to 40%.
                 </ListItem>
-                <ListItem w='90%' mt={'1em'} textAlign={'left'}>
+                <ListItem>
                   Deployed applications to Vercel and Azure, utilizing CI/CD pipelines and environment configs to streamline releases and maintain 99.9% uptime.
                 </ListItem>
-                <ListItem w='90%' mt={'1em'}textAlign={'left'}>
+                <ListItem>
                   Delivered production-ready interfaces styled with Tailwind CSS, ensuring mobile-first responsiveness and WCAG 2.1 accessibility compliance.
                 </ListItem>
-                <ListItem w='83%' mt={'1em'}textAlign={'left'}>
+                <ListItem>
                   Consulted on technical architecture, tooling, and best practices for mid-sized engineering teams to ensure scalable and maintainable codebases.
                 </ListItem>
-                
               </UnorderedList>
             </Box>
           </Flex>
         </Box>
-        <Box id='past-experience-2' h={'full'} w='full' mt={'1em'}>
-          <Flex justify={'space-evenly'} >
-            <Box w='70%'>
-              <Box mt='3em' mr={'12em'}>
-                <Text fontSize={'4xl'}>Full Stack Engineer </Text>
-                <Text fontSize={'4xl'} mr={'4.9em'}>@ Fly.io</Text>
-                <Text fontSize={'xl'} mt={'1em'} mr={'1.5em'}>August 2022 - September 2025</Text>
-              </Box>
+
+        {/* Experience 2 */}
+        <Box id='past-experience-2' w='full' py={'3em'}>
+          <Flex maxW="1200px" mx="auto" align="flex-start" gap={8}>
+            <Box minW="340px" maxW="340px" pr={8}>
+              <Text fontSize={'4xl'}>Full Stack Engineer</Text>
+              <Text fontSize={'4xl'}>@ Fly.io</Text>
+              <Text fontSize={'xl'} mt={'1em'}>August 2022 - September 2025</Text>
             </Box>
-            <Box fontSize={'25px'} >
-                <Box w='90%' fontSize={'3xl'} mr={'10em'} mt={'2.2em'} textAlign={'left'}>
-                  Technologies : Elixir, Phoenix Liveview, JavaScript, Ruby, Go, Postgres, Docker, Flyctl, HTML5, TailwindCSS, Git, Github, Slack
-                </Box>
-              <UnorderedList id='experience-1' >
-                <ListItem w='83%' mt={'1em'} mr={'1em'} textAlign={'left'}>
-                  Architected complex database schemas and queries in PostgreSQL,<br></br>  ensuring data integrity and efficient data retrieval
+            <Box flex={1}>
+              <Box fontSize={'3xl'} mb={2}>
+                Technologies: Elixir, Phoenix Liveview, JavaScript, Ruby, Go, Postgres, Docker, Flyctl, HTML5, TailwindCSS, Git, Github, Slack
+              </Box>
+              <UnorderedList spacing={3}>
+                <ListItem>
+                  Architected complex database schemas and queries in PostgreSQL, ensuring data integrity and efficient data retrieval
                 </ListItem>
-                <ListItem w='90%' mt={'1em'} textAlign={'left'}>
-                  Restructured and implemented an upgraded OAuth authentication system, enhancing application security and improving
-                  user authentication experience by 30%.
+                <ListItem>
+                  Restructured and implemented an upgraded OAuth authentication system, enhancing application security and improving user authentication experience by 30%.
                 </ListItem>
-                <ListItem w='90%' mt={'1em'}textAlign={'left'}>
-                  Collaborated with frontend and backend teams to architect and implement RESTful and GraphQL APIs,
-                  ensuring smooth integration and data consistency.
+                <ListItem>
+                  Collaborated with frontend and backend teams to architect and implement RESTful and GraphQL APIs, ensuring smooth integration and data consistency.
                 </ListItem>
-                <ListItem w='83%' mt={'1em'}textAlign={'left'}>
+                <ListItem>
                   Engineered scalable Ruby applications, optimizing performance and ensuring robustness for high-traffic scenarios.
                 </ListItem>
               </UnorderedList>
             </Box>
           </Flex>
         </Box>
-        <Box id='past-experience-3' h={'600px'} w='full' mt={'1em'}>
-          <Flex justify={'space-evenly'} >
-            <Box w='full'>
-              <Box mt='3em' mr={'12em'}>
-              {/* <Text fontSize={'4xl'} textAlign={'start'}>Full Stack Engineer <br></br>Intern @ Fly.io </Text> */}
-                <Text fontSize={'4xl'}>Full Stack Engineer </Text>
-                <Text fontSize={'4xl'} mr={'2em'}>Intern @ Fly.io</Text>
-                <Text fontSize={'xl'} mt={'1em'} mr={'4em'}>May 2022 - August 2022</Text>
-              </Box>
 
+        {/* Experience 3 */}
+        <Box id='past-experience-3' w='full' py={'3em'}>
+          <Flex maxW="1200px" mx="auto" align="flex-start" gap={8}>
+            <Box minW="340px" maxW="340px" pr={8}>
+              <Text fontSize={'4xl'}>Full Stack Engineer</Text>
+              <Text fontSize={'4xl'}>Intern @ Fly.io</Text>
+              <Text fontSize={'xl'} mt={'1em'}>May 2022 - August 2022</Text>
             </Box>
-            <Box fontSize={'25px'} p={'2em'} >
-                <Box w='90%' fontSize={'3xl'} mr={'9em'} textAlign={'left'} mt={'0.5em'} >
-                  Technologies : Elixir, Phoenix Liveview, Ruby, JavaScript, Postgres, Docker, Flyctl, HTML5, TailwindCSS, Git, Github, Slack
-                </Box>
-              <UnorderedList id='experience-2' mt={'1em'} textAlign={'left'} >
-                <ListItem w='85%' >
-                  Leveraged Phoenix LiveView to create real-time, interactive web applications, enhancing user
-                  engagement and reducing the need for client-side JavaScript.
+            <Box flex={1}>
+              <Box fontSize={'3xl'} mb={2}>
+                Technologies: Elixir, Phoenix Liveview, Ruby, JavaScript, Postgres, Docker, Flyctl, HTML5, TailwindCSS, Git, Github, Slack
+              </Box>
+              <UnorderedList spacing={3}>
+                <ListItem>
+                  Leveraged Phoenix LiveView to create real-time, interactive web applications, enhancing user engagement and reducing the need for client-side JavaScript.
                 </ListItem>
-                <ListItem w='78%' textAlign={'left'} mt={'1em'} >
-                  Built reusable Elixir libraries and components, speeding up development cycles and ensuring consistent
-                  functionality across projects.
+                <ListItem>
+                  Built reusable Elixir libraries and components, speeding up development cycles and ensuring consistent functionality across projects.
                 </ListItem>
-                <ListItem w='80%' textAlign={'left'} mt={'1em'} >
-                  Participated in code reviews and provided feedback to other developers, helping to improve code quality
-                  and maintainability
+                <ListItem>
+                  Participated in code reviews and provided feedback to other developers, helping to improve code quality and maintainability
                 </ListItem>
               </UnorderedList>
             </Box>
