@@ -110,6 +110,7 @@ function Projects() {
           <div className="project-features-list">
             <div className="project-features-title">Features List</div>
             <Box textAlign={'start'} pl={'2em'}>
+                <Text pt={'1em'}>- StockX.com API</Text>
                 <Text pt={'1em'}>- Sneaker listings (CRUD)</Text>
                 <Text pt={'1em'}>- Sneaker reviews (CRUD)</Text>
                 <Text pt={'1em'}>- AWS S3 Image uploads</Text>
@@ -177,11 +178,17 @@ function Projects() {
               Features List
             </div>
               <Box textAlign={'start'} pl={'2em'}>
-                <Text>- Create Shelves to add
-                  <Text pl={'1.2em'}>albums (CRUD)</Text> </Text>
-                <Text pt={'1em'}>- Search by artist or album</Text>
-                <Text pt={'1em'}>- Leave reviews for albums (CRUD)</Text>
-                <Text pt={'1em'}>- Sign up / in with email</Text>
+              <Text>- Discogs.com API</Text>
+                <Text pt={'1em'}>- Create Shelves to add
+                  <Text pl={'1.2em'}>albums (CRUD)</Text> 
+                </Text>
+                <Text pt={'1em'}>- Search bar by artist or
+                  <Text pl={'1.2em'}>album</Text>
+                </Text>
+                <Text pt={'1em'}>- Leave reviews for albums
+                  <Text pl={'1.2em'}>(CRUD)</Text>
+                </Text>
+                <Text pt={'1em'}>- Oauth with email & password</Text>
               </Box>
           </div>
           <div className="project-techs goodTunes-techs">
