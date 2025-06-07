@@ -237,11 +237,11 @@ function Projects() {
           Automate your Spotify streaming experience with our powerful bot.
           </div>
           <div className="project-links">
-            <a href="https://beachitt.fly.dev">
+            <a href="https://spotify-api.fly.dev/">
               Live App
               <i class="fas fa-globe"></i>
             </a>
-            <a href="https://github.com/chrisbh4/beachitt">
+            <a href="https://github.com/chrisbh4/spotify-api">
               GitHub
               <i className="fab fa-github" />
             </a>
