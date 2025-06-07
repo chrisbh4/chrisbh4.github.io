@@ -261,31 +261,19 @@ function Projects() {
           </div>
           <div className="project-techs">
             <div className="project-techs-top">
+              <div className="project-tech">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elixir/elixir-original-wordmark.svg" alt="tech logo" />
+                <div>Elixir</div>
+              </div>
               <div className="project-tech js-tech">
                 <img src={js} alt="tech logo" />
                 <div>JavaScript</div>
               </div>
-              <div className="project-tech">
-                <img src={express} alt="tech logo" />
-                <div>Express</div>
-              </div>
-              <div className="project-tech">
-                <img src={react} alt="tech logo" />
-                <div>React.js</div>
-              </div>
             </div>
             <div className="project-techs-bottom">
-              <div className="project-tech">
-                <img src={redux} alt="tech logo" />
-                <div>Redux.js</div>
-              </div>
-              <div className="project-tech google-tech">
-              <img src={postgresql} alt="tech logo" />
-                <div>PostgreSQL</div>
-              </div>
-              <div className="project-tech google-tech">
-                <img src="https://devicon-website.vercel.app/api/google/original.svg" alt="tech logo" />
-                <Text pos={'relative'} left={'4px'} >Google</Text>
+            <div className="project-tech">
+                <img style={{ marginLeft: '40px' }} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/phoenix/phoenix-original.svg" alt="tech logo" />
+                <div>Phoenix Liveview</div>
               </div>
             </div>
           </div>
