@@ -69,6 +69,9 @@
   /* background-color: #3b90c8; */
   background-color: #3b90c8;
 }
+.spotify-card {
+  background-color: #13913f;
+}
 
 /* Original settings */
 /* .project-card:hover {

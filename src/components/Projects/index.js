@@ -180,7 +180,7 @@ function Projects() {
               <Box textAlign={'start'} pl={'2em'}>
               <Text>- Discogs.com API</Text>
                 <Text pt={'1em'}>- Create Shelves to add
-                  <Text pl={'1.2em'}>albums (CRUD)</Text> 
+                  <Text pl={'1.2em'}>albums (CRUD)</Text>
                 </Text>
                 <Text pt={'1em'}>- Search bar by artist or
                   <Text pl={'1.2em'}>album</Text>
@@ -225,7 +225,73 @@ function Projects() {
       </div>
 
       <div className="projects-container">
-        {/* Beachitt CARD */}
+        {/* Spotify Bot CARD */}
+        <div className="project-card spotify-card">
+          <div className="project-image beachitt-image">
+            <img src="https://imgur.com/rluLo3S.png" alt="project page" />
+          </div>
+          <div className="project-page beachitt-page">
+            <img src="https://imgur.com/kuSZnSF.png" alt="project page" />
+          </div>
+          <div className="project-description beachitt-description">
+          Automate your Spotify streaming experience with our powerful bot.
+          </div>
+          <div className="project-links">
+            <a href="https://beachitt.fly.dev">
+              Live App
+              <i class="fas fa-globe"></i>
+            </a>
+            <a href="https://github.com/chrisbh4/beachitt">
+              GitHub
+              <i className="fab fa-github" />
+            </a>
+          </div>
+          <div className="project-features-list beachitt-features">
+            <div className="project-features-title">Features List</div>
+            <div>
+
+              <Box textAlign={'start'} pl={'4em'}>
+                <Text>- Spotify API</Text>
+                <Text>- Spotify Web Playback SDK integration</Text>
+                <Text>- Automated streaming capability</Text>
+                <Text>- Real-time stream counting</Text>
+                <Text>- OAuth2 authentication implementation</Text>
+                <Text>- Automatic token refresh functionality</Text>
+              </Box>
+            </div>
+          </div>
+          <div className="project-techs">
+            <div className="project-techs-top">
+              <div className="project-tech js-tech">
+                <img src={js} alt="tech logo" />
+                <div>JavaScript</div>
+              </div>
+              <div className="project-tech">
+                <img src={express} alt="tech logo" />
+                <div>Express</div>
+              </div>
+              <div className="project-tech">
+                <img src={react} alt="tech logo" />
+                <div>React.js</div>
+              </div>
+            </div>
+            <div className="project-techs-bottom">
+              <div className="project-tech">
+                <img src={redux} alt="tech logo" />
+                <div>Redux.js</div>
+              </div>
+              <div className="project-tech google-tech">
+              <img src={postgresql} alt="tech logo" />
+                <div>PostgreSQL</div>
+              </div>
+              <div className="project-tech google-tech">
+                <img src="https://devicon-website.vercel.app/api/google/original.svg" alt="tech logo" />
+                <Text pos={'relative'} left={'4px'} >Google</Text>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="project-card beachitt-card">
           <div className="project-image beachitt-image">
             <img src="https://imgur.com/w5U7FoB.png" alt="project page" />
