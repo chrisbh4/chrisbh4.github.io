@@ -1,68 +1,117 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Personal Portfolio
 
-## Available Scripts
+A modern, responsive personal portfolio website built with React and Chakra UI.
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- Modern and responsive design
+- Built with React 18
+- Styled with Chakra UI
+- Smooth animations with Framer Motion
+- Optimized for performance
+- Docker support for containerization
+- Continuous deployment with GitHub Actions and Fly.io
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🛠️ Technologies Used
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- React.js
+- Chakra UI
+- Framer Motion
+- Docker
+- GitHub Actions
+- Fly.io
 
-### `npm test`
+## 📦 Dependencies
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React 18.2.0
+- Chakra UI 2.8.0
+- Framer Motion 6.5.1
+- React Icons 3.11.0
+- And more (see package.json for full list)
 
-### `npm run build`
+## 🚀 Getting Started
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Node.js (LTS version recommended)
+- npm or yarn
+- Git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. Clone the repository
+```bash
+git clone <your-repo-url>
+cd portfolio
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Start the development server
+```bash
+npm start
+# or
+yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The application will start running at `http://localhost:3000`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🏗️ Building for Production
 
-## Learn More
+```bash
+npm run build
+# or
+yarn build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🐳 Docker Support
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Build the Docker image:
+```bash
+docker build -t portfolio .
+```
 
-### Code Splitting
+Run the container:
+```bash
+docker run -p 3000:3000 portfolio
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## 📝 Scripts
 
-### Analyzing the Bundle Size
+- `npm start` - Starts the development server
+- `npm build` - Creates a production build
+- `npm test` - Runs the test suite
+- `npm run deploy` - Deploys to GitHub Pages
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## 🚀 Deployment
 
-### Making a Progressive Web App
+This project is configured for deployment to Fly.io using GitHub Actions for CI/CD.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## 📄 License
 
-### Advanced Configuration
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## 👤 Author
 
-### Deployment
+[Your Name]
+- Website: [Your website]
+- GitHub: [@yourusername]
+- LinkedIn: [Your LinkedIn]
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## 🤝 Contributing
 
-### `npm run build` fails to minify
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## ✨ Acknowledgments
+
+- Thanks to all the open-source libraries and tools used in this project
+- Special thanks to the React and Chakra UI communities
