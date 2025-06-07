@@ -227,13 +227,13 @@ function Projects() {
       <div className="projects-container">
         {/* Spotify Bot CARD */}
         <div className="project-card spotify-card">
-          <div className="project-image beachitt-image">
+          <div className="project-image spotify-image">
             <img src="https://imgur.com/rluLo3S.png" alt="project page" />
           </div>
           <div className="project-page beachitt-page">
             <img src="https://imgur.com/kuSZnSF.png" alt="project page" />
           </div>
-          <div className="project-description beachitt-description">
+          <div className="project-description spotify-description">
           Automate your Spotify streaming experience with our powerful bot.
           </div>
           <div className="project-links">
@@ -246,10 +246,9 @@ function Projects() {
               <i className="fab fa-github" />
             </a>
           </div>
-          <div className="project-features-list beachitt-features">
+          <div className="project-features-list spotify-features">
             <div className="project-features-title">Features List</div>
             <div>
-
               <Box textAlign={'start'} pl={'4em'}>
                 <Text>- Spotify API</Text>
                 <Text>- Spotify Web Playback SDK integration</Text>
