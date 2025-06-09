@@ -45,11 +45,13 @@
   width: 400px;
   height: 250px;
   background-color: #5c9635;
-  transition: all 1.5s ease-in-out;
   overflow: hidden;
   position: relative;
   z-index: auto;
   margin: 40px;
+  transform-origin: center center;
+  will-change: transform, filter, box-shadow;
+  cursor: pointer;
 }
 
 .snkr-mrkt-card {
@@ -120,30 +122,20 @@
   padding-top: 1em;
 }
 
-
 .project-card:hover > .snkr-mrkt-image {
   margin-bottom: 50px;
   padding-bottom: 60px;
   padding-right: 20px;
-  transition: all 1.5s ease-in-out;
 }
-
 
 .project-card:hover > .spudhub-image {
-  /* margin-bottom: 50px; */
-  /* padding-bottom: 20px; */
   padding-right: 20px;
-  transition: all 1.5s ease-in-out;
 }
-
 
 .project-card:hover > .spudhub-description {
-  /* margin-bottom: 0px; */
   padding-bottom: 60px;
   padding-right: 20px;
-  transition: all 1.5s ease-in-out;
 }
-
 
 .snkr-mrkt-image  {
   width: 180px;
@@ -157,11 +149,9 @@
   margin-bottom: 30px;
 }
 
-.spudhub-image  img {
-  /* width: 180px; */
+.spudhub-image img {
   height: auto;
   margin-top: 15px;
-
 }
 
 .spudhub-description {
@@ -181,7 +171,6 @@
 .spotify-image img {
   width: 180px;
   height: auto;
-  transition: all 1.5s ease-in-out;
 }
 
 .project-card:hover > .spotify-image img {
@@ -208,7 +197,6 @@
 .project-card:hover > .beachitt-description {
   padding-bottom: 60px;
   padding-right: 20px;
-  transition: all 1.5s ease-in-out;
 }
 .spotify-description {
   padding-top: 20px;
@@ -217,7 +205,6 @@
 .project-card:hover > .spotify-description {
   padding-top: 50px;
   padding-right: 50px;
-  transition: all 1.5s ease-in-out;
 }
 
 .project-card:hover > .goodTunes-image img {
@@ -239,7 +226,10 @@
 }
 
 .project-image {
-  transition: all 1.5s ease-in-out;
+  position: relative;
+  z-index: 2;
+  will-change: transform, opacity;
+  transform-origin: center center;
 }
 
 .project-card:hover > .project-image {
@@ -251,13 +241,14 @@
   color: white;
   line-height: 1.4;
   width: 340px;
-  /* width: 280px; */
   text-align: center;
   margin-bottom: 40px;
-  transition: all 1.5s ease-in-out;
   font-size: 17px;
   padding-bottom: 19px;
-
+  position: relative;
+  z-index: 2;
+  will-change: transform, opacity;
+  opacity: 0.9;
 }
 
 .snkr-mrkt-description {
@@ -279,7 +270,9 @@
   top: -180px;
   right: 30px;
   font-family: "Azeret Mono", monospace;
-  transition: all 1.5s ease-in-out;
+  z-index: 3;
+  will-change: transform, opacity;
+  opacity: 0;
 }
 
 .project-links i {
@@ -321,7 +314,9 @@
   position: absolute;
   top: -205px;
   right: -250px;
-  transition: all 1.5s ease-in-out;
+  z-index: 3;
+  will-change: transform, opacity;
+  opacity: 0;
 }
 
 .project-features-title {
@@ -374,7 +369,9 @@
   position: absolute;
   bottom: 0px;
   right: -300px;
-  transition: all 1.5s ease-in-out;
+  z-index: 3;
+  will-change: transform, opacity;
+  opacity: 0;
 }
 
 .project-card:hover > .project-techs {
