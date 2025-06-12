@@ -417,7 +417,7 @@ function Projects() {
           <div className="project-links">
             <a href="https://spud-hub.fly.dev">
               Live App
-              <i class="fas fa-globe"></i>
+              <i className="fas fa-globe"></i>
             </a>
             <a href="https://github.com/michellekontoff/spudhub">
               GitHub
@@ -478,7 +478,7 @@ function Projects() {
           <div className="project-links">
             <a href="http://snkr-mrkt.fly.dev">
               Live App
-              <i class="fas fa-globe"></i>
+              <i className="fas fa-globe"></i>
             </a>
             <a href="https://github.com/chrisbh4/SnkrMrkt">
               GitHub
@@ -544,7 +544,7 @@ function Projects() {
           <div className="project-links goodTunes-links">
             <a href="https://goodtunes.fly.dev">
               Live App
-              <i class="fas fa-globe"></i>
+              <i className="fas fa-globe"></i>
             </a>
             <a href="https://github.com/chrisbh4/GoodTunes">
               GitHub
@@ -557,15 +557,9 @@ function Projects() {
             </div>
               <Box textAlign={'start'} pl={'2em'}>
               <Text>- Discogs.com API</Text>
-                <Text pt={'1em'}>- Create Shelves to add
-                  <Text pl={'1.2em'}>albums (CRUD)</Text>
-                </Text>
-                <Text pt={'1em'}>- Search bar by artist or
-                  <Text pl={'1.2em'}>album</Text>
-                </Text>
-                <Text pt={'1em'}>- Leave reviews for albums
-                  <Text pl={'1.2em'}>(CRUD)</Text>
-                </Text>
+                <Text pt={'1em'}>- Create Shelves to add albums (CRUD)</Text>
+                <Text pt={'1em'}>- Search bar by artist or album</Text>
+                <Text pt={'1em'}>- Leave reviews for albums (CRUD)</Text>
                 <Text pt={'1em'}>- Oauth with email & password</Text>
               </Box>
           </div>
@@ -617,7 +611,7 @@ function Projects() {
           <div className="project-links">
             <a href="https://spotify-api.fly.dev/">
               Live App
-              <i class="fas fa-globe"></i>
+              <i className="fas fa-globe"></i>
             </a>
             <a href="https://github.com/chrisbh4/spotify-api">
               GitHub
@@ -671,7 +665,7 @@ function Projects() {
           <div className="project-links">
             <a href="https://beachitt.fly.dev">
               Live App
-              <i class="fas fa-globe"></i>
+              <i className="fas fa-globe"></i>
             </a>
             <a href="https://github.com/chrisbh4/beachitt">
               GitHub
