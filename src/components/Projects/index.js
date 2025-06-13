@@ -121,9 +121,12 @@ function Projects() {
   const projectRefs = useRef([]);
 
   useEffect(() => {
+    // Store the current refs in a variable to use in cleanup
+    const currentRefs = projectRefs.current;
+
     // Initialize animation for each project card
     // This runs once when component mounts and sets up all animations
-    projectRefs.current.forEach((card) => {
+    currentRefs.forEach((card) => {
 
       // INITIAL STATE SETUP
       // Set the starting appearance of each card before any user interaction
@@ -357,7 +360,6 @@ function Projects() {
         hideTimeline.add(image, {
           marginBottom: '0px',      // Remove bottom margin
           scale: [1.03, 1],         // Shrink from 103% back to normal
-          rotate: [0, 0.5],         // Add slight rotation while returning
           opacity: [1, 0.95],       // Slight fade to 95%
           duration: 1200,           // 1.2 seconds
           ease: 'inOutQuart'        // Smooth quartic curve both directions
@@ -380,7 +382,7 @@ function Projects() {
     // This runs when the component unmounts or dependencies change
     // Prevents memory leaks by removing event listeners
     return () => {
-      projectRefs.current.forEach((card) => {
+      currentRefs.forEach((card) => {
         if (card && card.parentNode) {  // Safety check - ensure element still exists
           // Remove event listeners using the stored references
           card.removeEventListener('mouseenter', card._mouseenterHandler);
