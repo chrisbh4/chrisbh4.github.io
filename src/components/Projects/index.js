@@ -602,7 +602,7 @@ function Projects() {
           <div className="project-image spotify-image">
             <img src="https://imgur.com/rluLo3S.png" alt="project page" />
           </div>
-          <div className="project-page beachitt-page">
+          <div className="project-page spotify-page">
             <img src="https://imgur.com/kuSZnSF.png" alt="project page" />
           </div>
           <div className="project-description spotify-description">
