@@ -244,7 +244,7 @@ function Projects() {
           x: [50, 0],               // Slides in from 50px to the right
           y: [15, 0],               // Slides up from 15px below
           scale: [0.9, 1],          // Grows from 90% to full size
-          rotate: [50, 0],           // Starts rotated 2° clockwise, straightens
+          rotate: [50, 0],           // Starts rotated 50° clockwise, straightens
           duration: 1700,           // 1.7 seconds
           ease: 'outQuart'          // Consistent easing
         }, 200);
@@ -257,8 +257,8 @@ function Projects() {
           opacity: [0, 1],          // Fade in
           y: [30, 0],               // Slides up from 30px below
           scale: [0.8, 1],          // Grows from 80% to full size
-          rotate: [-3, 0],          // Starts rotated 3° counter-clockwise, straightens
-          duration: 1800,           // 1.8 seconds (longest duration for final impact)
+          rotate: [50, 0],           // Starts rotated 50° clockwise, straightens
+          duration: 1700,           // 1.8 seconds (longest duration for final impact)
           ease: 'outCubic'          // Smooth cubic curve
         }, 200);
 
