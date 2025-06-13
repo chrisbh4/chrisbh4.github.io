@@ -1,350 +1,986 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '@fontsource/kanit/500.css';
 import '@fontsource/rajdhani';
 import {
-  ChakraProvider,
   Box,
+  ChakraProvider,
+  Flex,
   Text,
   Link,
-  VStack,
-  Flex,
-  Center,
   Image,
-  Icon,
-  ListItem,
-  UnorderedList,
+  VStack,
   HStack,
-  Stack
+  Icon,
+  Container,
+  useColorModeValue,
+  Button,
+  Stack,
+  Grid,
+  GridItem,
+  Center,
+  UnorderedList,
+  ListItem,
+  IconButton,
+  Tooltip,
+  useBreakpointValue,
+  motion,
+  keyframes
 } from '@chakra-ui/react';
 import {
   FaGithub,
   FaLinkedin,
   FaAngellist,
-  FaIdBadge
+  FaIdBadge,
+  FaArrowDown,
+  FaCode,
+  FaServer,
+  FaDatabase,
+  FaTools,
+  FaExternalLinkAlt,
+  FaBars,
+  FaTimes
 } from "react-icons/fa";
-
+import { motion as framerMotion } from 'framer-motion';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { EmailIcon } from '@chakra-ui/icons';
 import Projects from './components/Projects';
 
+// Animation variants
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 }
+};
 
-function App() {
+const slideIn = {
+  hidden: { x: -60, opacity: 0 },
+  visible: { x: 0, opacity: 1 }
+};
+
+const scaleIn = {
+  hidden: { scale: 0.95, opacity: 0 },
+  visible: { scale: 1, opacity: 1 }
+};
+
+const glowAnimation = keyframes`
+  0% { box-shadow: 0 0 5px #00ff9d, 0 0 10px #00ff9d, 0 0 15px #00ff9d; }
+  50% { box-shadow: 0 0 10px #00ff9d, 0 0 20px #00ff9d, 0 0 30px #00ff9d; }
+  100% { box-shadow: 0 0 5px #00ff9d, 0 0 10px #00ff9d, 0 0 15px #00ff9d; }
+`;
+
+const MotionBox = framerMotion(Box);
+const MotionFlex = framerMotion(Flex);
+const MotionStack = framerMotion(Stack);
+const MotionGrid = framerMotion(Grid);
+const MotionText = framerMotion(Text);
+const MotionHeading = framerMotion(Text);
+
+// Create a separate component for the main content
+function AppContent() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const isMobile = useBreakpointValue({ base: true, md: false });
+
+  // Futuristic color scheme
+  const bgColor = useColorModeValue('#0a0a0a', '#0a0a0a');
+  const textColor = useColorModeValue('#ffffff', '#ffffff');
+  const accentColor = useColorModeValue('#00ff9d', '#00ff9d');
+  const secondaryAccent = useColorModeValue('#ff00ff', '#ff00ff');
+  const cardBg = useColorModeValue('rgba(20, 20, 20, 0.8)', 'rgba(20, 20, 20, 0.8)');
+  const borderColor = useColorModeValue('rgba(0, 255, 157, 0.2)', 'rgba(0, 255, 157, 0.2)');
+  const gradientStart = useColorModeValue('#00ff9d', '#00ff9d');
+  const gradientEnd = useColorModeValue('#ff00ff', '#ff00ff');
+
+  const skillCardStyle = {
+    transition: 'all 0.2s',
+    _hover: {
+      borderColor: accentColor,
+      boxShadow: `0 0 20px rgba(0, 255, 157, 0.2)`,
+    }
+  };
+
+  const imageStyle = {
+    transition: 'all 0.2s',
+    _hover: {
+      filter: 'brightness(0) invert(1) sepia(1) saturate(1000%) hue-rotate(70deg)'
+    }
+  };
 
   function handleClick(event, id) {
-    event.preventDefault(); // Prevent the default click behavior
+    event.preventDefault();
     const element = document.getElementById(id);
-
     if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: "center"
-        });
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
     }
-}
+    if (isMobile) {
+      setIsMenuOpen(false);
+    }
+  }
 
   return (
-    <ChakraProvider >
-      {/*Main Body */}
-      <Box textAlign="center" fontSize="xl" fontFamily={'Rajdhani'} >
-        <Box id='nav' bg={"#393e61"} w="full" h={{ base: "auto", md: "6em" }} position={'fixed'} zIndex={1} py={{ base: 4, md: 0 }} >
-          <Flex
-            justify={{ base: "center", md: "space-between" }}
-            align={'center'}
-            h={{ base: "auto", md: "full" }}
-            color={'white'}
-            direction={{ base: "column", md: "row" }}
-            gap={{ base: 2, md: 0 }}
-          >
-            <Text fontSize={{ base: "3xl", md: "5xl" }} ml={{ base: 0, md: '8%' }}>Christian Brown</Text>
-            <Flex
-              align='center'
-              justify={{ base: 'center', md: 'flex-end' }}
-              pr={{ base: 0, md: '2%' }}
-              w={{ base: "100%", md: "50%" }}
-              direction={{ base: "column", sm: "row" }}
-              gap={{ base: 2, sm: 4 }}
-              wrap="wrap"
+    <Box
+      bg={bgColor}
+      color={textColor}
+      minH="100vh"
+      fontFamily="Rajdhani"
+      position="relative"
+      overflow="hidden"
+    >
+      {/* Animated background elements */}
+      <MotionBox
+        position="absolute"
+        top="10%"
+        right="10%"
+        w="300px"
+        h="300px"
+        borderRadius="full"
+        bg="rgba(0, 255, 157, 0.05)"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.3, 0.5, 0.3],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+      <MotionBox
+        position="absolute"
+        bottom="20%"
+        left="5%"
+        w="200px"
+        h="200px"
+        borderRadius="full"
+        bg="rgba(255, 0, 255, 0.05)"
+        animate={{
+          scale: [1, 1.3, 1],
+          opacity: [0.2, 0.4, 0.2],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+
+      {/* Futuristic Navigation */}
+      <MotionBox
+        as="nav"
+        position="fixed"
+        w="full"
+        zIndex={1000}
+        bg="rgba(10, 10, 10, 0.85)"
+        backdropFilter="blur(10px)"
+        borderBottom="1px"
+        borderColor={borderColor}
+        py={4}
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        <Container maxW="container.xl">
+          <Flex justify="space-between" align="center">
+            <MotionText
+              as="h1"
+              fontSize={{ base: "2xl", md: "3xl" }}
+              fontWeight="bold"
+              bgGradient={`linear(to-r, ${gradientStart}, ${gradientEnd})`}
+              bgClip="text"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
             >
-              <Link href='#home' style={{ textDecoration: "none" }} onClick={(e) => handleClick(e, 'home')} fontWeight={'medium'} fontSize={{ base: 'lg', md: '2xl' }}>Home</Link>
-              <Link href='#past-experience' style={{ textDecoration: "none" }} onClick={(e) => handleClick(e, 'past-experience')} fontWeight={'medium'} fontSize={{ base: 'lg', md: '2xl' }}>Past Experiences</Link>
-              <Link href='#skills' style={{ textDecoration: "none" }} onClick={(e) => handleClick(e, 'skills')} fontWeight={'medium'} fontSize={{ base: 'lg', md: '2xl' }}>Skills</Link>
-              <Link href='#projects' style={{ textDecoration: "none" }} onClick={(e) => handleClick(e, 'projects')} fontWeight={'medium'} fontSize={{ base: 'lg', md: '2xl' }}>Projects</Link>
-              <Link href='https://drive.google.com/file/d/1jjcvTvRAx2JS48Z5sOGADXt5JNde7aIn/view?usp=sharing' style={{ textDecoration: "none" }}
-                    fontWeight={'medium'} fontSize={{ base: 'lg', md: '2xl' }}
-                >Resume
-              </Link>
-              <ColorModeSwitcher justifySelf="flex-end" _hover={{bg: "hidden"}} />
-            </Flex>
+              CB
+            </MotionText>
+
+            {/* Desktop Navigation */}
+            <HStack spacing={8} display={{ base: 'none', md: 'flex' }}>
+              {['home', 'about', 'experience', 'skills', 'projects'].map((item) => (
+                <MotionBox
+                  key={item}
+                  whileHover={{ y: -2 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Link
+                    href={`#${item}`}
+                    onClick={(e) => handleClick(e, item)}
+                    fontSize="lg"
+                    fontWeight="medium"
+                    _hover={{ color: accentColor }}
+                    transition="color 0.2s"
+                    position="relative"
+                    _after={{
+                      content: '""',
+                      position: 'absolute',
+                      width: '0%',
+                      height: '2px',
+                      bottom: '-2px',
+                      left: '0',
+                      bg: accentColor,
+                      transition: 'width 0.3s ease-in-out',
+                    }}
+                    _hover={{
+                      _after: {
+                        width: '100%',
+                      },
+                    }}
+                  >
+                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                  </Link>
+                </MotionBox>
+              ))}
+              <Button
+                as="a"
+                href="https://drive.google.com/file/d/1jjcvTvRAx2JS48Z5sOGADXt5JNde7aIn/view?usp=sharing"
+                target="_blank"
+                variant="outline"
+                borderColor={accentColor}
+                color={accentColor}
+                _hover={{
+                  bg: accentColor,
+                  color: bgColor,
+                  transform: 'translateY(-2px)',
+                }}
+                transition="all 0.2s"
+              >
+                Resume
+              </Button>
+              <ColorModeSwitcher />
+            </HStack>
+
+            {/* Mobile Menu Button */}
+            <IconButton
+              display={{ base: 'flex', md: 'none' }}
+              aria-label="Menu"
+              icon={isMenuOpen ? <FaTimes /> : <FaBars />}
+              variant="ghost"
+              color={accentColor}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            />
           </Flex>
-        </Box>
-        <Box id='home' bg={"#13d7a2"} w="full" minH={{ base: "100vh", md: "600px" }} pt={{ base: '12em', md: '8em' }} pb={'3em'} >
-          <Stack
-            direction={{ base: "column", lg: "row" }}
-            justify={'center'}
-            align={'center'}
-            spacing={{ base: 8, lg: 16 }}
-            px={{ base: 4, md: 8 }}
+
+          {/* Mobile Navigation Menu */}
+          {isMenuOpen && (
+            <MotionBox
+              display={{ base: 'block', md: 'none' }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2 }}
+              mt={4}
+              p={4}
+              bg={cardBg}
+              borderRadius="lg"
+              border="1px"
+              borderColor={borderColor}
+            >
+              <VStack spacing={4} align="stretch">
+                {['home', 'about', 'experience', 'skills', 'projects'].map((item) => (
+                  <Link
+                    key={item}
+                    href={`#${item}`}
+                    onClick={(e) => handleClick(e, item)}
+                    fontSize="lg"
+                    fontWeight="medium"
+                    _hover={{ color: accentColor }}
+                    transition="color 0.2s"
+                  >
+                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                  </Link>
+                ))}
+                <Button
+                  as="a"
+                  href="https://drive.google.com/file/d/1jjcvTvRAx2JS48Z5sOGADXt5JNde7aIn/view?usp=sharing"
+                  target="_blank"
+                  variant="outline"
+                  borderColor={accentColor}
+                  color={accentColor}
+                  _hover={{
+                    bg: accentColor,
+                    color: bgColor,
+                  }}
+                >
+                  Resume
+                </Button>
+              </VStack>
+            </MotionBox>
+          )}
+        </Container>
+      </MotionBox>
+
+      {/* Hero Section */}
+      <Box id="home" minH="100vh" pt={{ base: "120px", md: "100px" }} position="relative">
+        <Container maxW="container.xl">
+          <Grid
+            templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }}
+            gap={12}
+            alignItems="center"
           >
-            <Box boxSize={{ base: '200px', md: '300px' }}>
-              <Image
-                src='https://imgur.com/N3BB4kx.png'
-                alt='Christian Brown'
-                borderRadius={'2xl'}
-                w="100%"
-                h="100%"
-                objectFit="cover"
-              />
-            </Box>
-            <VStack spacing={4} align={{ base: "center", lg: "start" }} maxW={{ base: "100%", lg: "50%" }} pl={{md: "5em"}}>
-              <Text fontSize={{ base: '2xl', md: '4xl', lg: '5xl' }} textAlign={{ base: "center", lg: "left" }}>
-                Hi, my name is Christian Brown.
-              </Text>
-               <Text fontSize={{ base: '2xl', md: '4xl', lg: '5xl' }} textAlign={{ base: "center", lg: "left" }}>
-                 I'm a Software Engineer from Sacramento, CA.
-              </Text>
-              <HStack justify={'center'} ml={{ md: '5em'}} pt={'1em'} spacing={4} wrap="wrap">
-                <Link href="https://github.com/chrisbh4">
-                  <Icon as={FaGithub} boxSize={{ base: 8, md: 12 }} />
-                </Link>
-                <Link href="https://www.linkedin.com/in/christian-brown-8770311ba/">
-                  <Icon as={FaLinkedin} boxSize={{ base: 8, md: 12 }} />
-                </Link>
-                <Link href="https://wellfound.com/profile/edit/overview">
-                  <Icon as={FaAngellist} boxSize={{ base: 8, md: 12 }} />
-                </Link>
-                <Link href="https://drive.google.com/file/d/1jjcvTvRAx2JS48Z5sOGADXt5JNde7aIn/view?usp=sharing">
-                  <Icon as={FaIdBadge} boxSize={{ base: 8, md: 12 }} />
-                </Link>
-                <Link href="mailto:chrismbh4@gmail.com">
-                  <EmailIcon boxSize={{ base: 8, md: 12 }} />
-                </Link>
-              </HStack>
-            </VStack>
-          </Stack>
-        </Box>
-        <Box id='about' w="full" py={{ base: 8, md: 12 }} px={{ base: 4, md: 8 }} >
-        <Box>
-          <Text textAlign={'left'} pl={{ base: 4, md: '3em' }} fontSize={{ base: '2xl', md: '4xl' }} pb={'0.5em'}>About</Text>
-          <Box w={{ base: '90%', md: '90%' }} h={'2px'} ml={{ base: 4, md: '5.4em' }} bg='white'></Box>
-          <Box w={{ base: '90%', md: '90%' }} h={'2px'} ml={{ base: 4, md: '5.4em' }} bg='black'></Box>
-        </Box>
-          <VStack spacing={6} align='center' fontSize={{ base: 'lg', md: '2xl' }} ml={{ md: '5em'}} pt={'1.5em'} px={{ base: 4, md: '5em', lg: '15em' }}>
-            <Box w={{ base: '100%', md: '90%' }}>
-              <Text align={'start'}>Before deep diving into software development, I attended Bacone College in Oklahoma on a basketball scholarship.
-                During my free time I enjoy playing basketball, cooking new recipes, and leveling up my coding skills.
-              </Text>
-            </Box>
-            <Box w={{ base: '100%', md: '90%' }}>
-              <Text align={'start'}>Ever since I've built my first full stack application my passion for code has sky rocketed. I've always enjoyed working with new tech or
-                    just build new apps ideas that just randomly pop into my head. I thrive working in a fast-pace enviorment that requires goal oriented communication.
-              </Text>
-            </Box>
-          </VStack>
-        </Box>
-        {/*Past Experience Section */}
-        <Box id='past-experience' px={{ base: 4, md: 8 }}>
-          <Text textAlign={'left'} pl={{ base: 4, md: '3em' }} fontSize={{ base: '2xl', md: '4xl' }} pb={'0.5em'} mt={'2.5em'}>Past Experience</Text>
-          <Box w={{ base: '90%', md: '90%' }} h={'2px'} ml={{ base: 4, md: '5.4em' }} bg='white'></Box>
-          <Box w={{ base: '90%', md: '90%' }} h={'2px'} ml={{ base: 4, md: '5.4em' }} bg='black'></Box>
-        </Box>
+            <GridItem>
+              <MotionStack
+                spacing={6}
+                initial="hidden"
+                animate="visible"
+                variants={slideIn}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <MotionText
+                  as="h1"
+                  fontSize={{ base: "4xl", md: "6xl" }}
+                  fontWeight="bold"
+                  bgGradient={`linear(to-r, ${gradientStart}, ${gradientEnd})`}
+                  bgClip="text"
+                  variants={scaleIn}
+                >
+                  Christian Brown
+                </MotionText>
+                <MotionText
+                  as="h2"
+                  fontSize={{ base: "2xl", md: "3xl" }}
+                  color={textColor}
+                  fontWeight="medium"
+                  variants={fadeIn}
+                >
+                  Full Stack Software Engineer
+                </MotionText>
+                <MotionText
+                  fontSize={{ base: "lg", md: "xl" }}
+                  color="gray.400"
+                  variants={fadeIn}
+                >
+                  Building the future of web applications with cutting-edge technologies
+                </MotionText>
+                <MotionStack
+                  direction={{ base: "column", sm: "row" }}
+                  spacing={4}
+                  pt={4}
+                  variants={fadeIn}
+                >
+                  <Button
+                    as="a"
+                    href="#projects"
+                    bg={accentColor}
+                    color={bgColor}
+                    size="lg"
+                    rightIcon={<FaArrowDown />}
+                    onClick={(e) => handleClick(e, 'projects')}
+                    _hover={{
+                      bg: 'transparent',
+                      color: accentColor,
+                      border: `2px solid ${accentColor}`,
+                      transform: 'translateY(-2px)',
+                      animation: `${glowAnimation} 2s infinite`,
+                    }}
+                    transition="all 0.2s"
+                  >
+                    View Projects
+                  </Button>
+                  <Button
+                    as="a"
+                    href="mailto:chrismbh4@gmail.com"
+                    variant="outline"
+                    borderColor={accentColor}
+                    color={accentColor}
+                    size="lg"
+                    leftIcon={<EmailIcon />}
+                    _hover={{
+                      bg: accentColor,
+                      color: bgColor,
+                      transform: 'translateY(-2px)',
+                      animation: `${glowAnimation} 2s infinite`,
+                    }}
+                    transition="all 0.2s"
+                  >
+                    Contact Me
+                  </Button>
+                </MotionStack>
+                <HStack spacing={6} pt={4}>
+                  {[
+                    { icon: FaGithub, href: 'https://github.com/chrisbh4', label: 'GitHub' },
+                    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/christian-brown-8770311ba/', label: 'LinkedIn' },
+                    { icon: FaAngellist, href: 'https://wellfound.com/profile/edit/overview', label: 'Wellfound' }
+                  ].map((social) => (
+                    <Tooltip key={social.label} label={social.label}>
+                      <IconButton
+                        as="a"
+                        href={social.href}
+                        target="_blank"
+                        aria-label={social.label}
+                        icon={<Icon as={social.icon} />}
+                        variant="ghost"
+                        size="lg"
+                        fontSize="20px"
+                        color={accentColor}
+                        _hover={{
+                          color: secondaryAccent,
+                          transform: 'translateY(-2px)',
+                          animation: `${glowAnimation} 2s infinite`,
+                        }}
+                      />
+                    </Tooltip>
+                  ))}
+                </HStack>
+              </MotionStack>
+            </GridItem>
+            <GridItem>
+              <MotionBox
+                initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ rotate: 2, scale: 1.02 }}
+              >
+                <Image
+                  src="https://imgur.com/N3BB4kx.png"
+                  alt="Christian Brown"
+                  borderRadius="2xl"
+                  boxShadow={`0 0 30px rgba(0, 255, 157, 0.1)`}
+                  _hover={{
+                    animation: `${glowAnimation} 2s infinite`,
+                  }}
+                />
+              </MotionBox>
+            </GridItem>
+          </Grid>
+        </Container>
+      </Box>
 
-        {/* Experience 1 */}
-        <Box id='past-experience-1' w='full' py={{ base: 6, md: '3em' }} px={{ base: 4, md: 8 }}>
-          <Stack
-            direction={{ base: "column", lg: "row" }}
-            maxW="1460px" //* Max-Width set to "1460 since Title is shorter than the others"
-            // maxW={{ md: "1650px", xl: "1800px"}}
-            mx="auto"
-            align="flex-start"
-            // spacing={{ base: 6, lg: 26 }}
-            gap={{ md: '10em'}}
+      {/* About Section */}
+      <Box id="about" py={20} bg={cardBg} position="relative">
+        <Container maxW="container.xl">
+          <MotionStack
+            spacing={8}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
           >
-            <Box minW={{ base: "100%", lg: "340px" }} maxW={{ base: "100%", lg: "340px" }} mt={{ md: '-5px'}} >
-              <Text fontSize={{ base: '2xl', md: '4xl' }}>Software Engineer</Text>
-              <Text fontSize={{ base: '2xl', md: '4xl' }}>@ Freelance</Text>
-              <Text fontSize={{ base: 'md', md: 'xl' }} mt={'1em'}>January 2020 - current</Text>
-            </Box>
-            <Box flex={1}>
-              <Box fontSize={{ base: 'lg', md: '3xl' }} mb={2} mr={{ md: 30}}>
-                Technologies: JavaScript, TypeScript, React, Next.js, Tailwind CSS, Node.js, GraphQL, Vercel, Microsoft Azure, Docker, MS SQL Server, GitHub
-              </Box>
-              <UnorderedList spacing={3} textAlign={'start'} fontSize={{ base: 'md', md: 'lg' }}>
-                <ListItem>
-                  Architected scalable full-stack solutions using JavaScript, TypeScript, REST and GraphQL APIs, reducing API response times by up to 40%.
-                </ListItem>
-                <ListItem>
-                  Deployed applications to Vercel and Azure, utilizing CI/CD pipelines and environment configs to streamline releases and maintain 99.9% uptime.
-                </ListItem>
-                <ListItem>
-                  Delivered production-ready interfaces styled with Tailwind CSS, ensuring mobile-first responsiveness and WCAG 2.1 accessibility compliance.
-                </ListItem>
-                <ListItem>
-                  Consulted on technical architecture, tooling, and best practices for mid-sized engineering teams to ensure scalable and maintainable codebases.
-                </ListItem>
-              </UnorderedList>
-            </Box>
-          </Stack>
-        </Box>
+            <MotionText
+              as="h2"
+              fontSize={{ base: "3xl", md: "4xl" }}
+              textAlign="center"
+              bgGradient={`linear(to-r, ${gradientStart}, ${gradientEnd})`}
+              bgClip="text"
+              variants={scaleIn}
+            >
+              About Me
+            </MotionText>
+            <Grid
+              templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }}
+              gap={8}
+              alignItems="center"
+            >
+              <GridItem>
+                <MotionText
+                  fontSize={{ base: "lg", md: "xl" }}
+                  lineHeight="tall"
+                  variants={fadeIn}
+                >
+                  Before diving into software development, I attended Bacone College in Oklahoma on a basketball scholarship.
+                  During my free time, I enjoy playing basketball, cooking new recipes, and leveling up my coding skills.
+                </MotionText>
+              </GridItem>
+              <GridItem>
+                <MotionText
+                  fontSize={{ base: "lg", md: "xl" }}
+                  lineHeight="tall"
+                  variants={fadeIn}
+                >
+                  Ever since I built my first full-stack application, my passion for code has skyrocketed. I thrive in fast-paced
+                  environments that require goal-oriented communication and love working with new technologies to bring ideas to life.
+                </MotionText>
+              </GridItem>
+            </Grid>
+          </MotionStack>
+        </Container>
+      </Box>
 
-        {/* Experience 2 */}
-        <Box id='past-experience-2' w='full' py={{ base: 6, md: '3em' }} px={{ base: 4, md: 8 }}>
-          <Stack
-            direction={{ base: "column", lg: "row" }}
-            // maxW={{ md: "1650px", lg: "1900px"}}
-            maxW="1450px"
-            mx="auto"
-            align="flex-start"
-            // spacing={{ base: 6, lg: 26 }}
-            gap={{ md: '10em'}}
+      {/* Experience Section */}
+      <Box id="experience" py={20} bg={bgColor} position="relative">
+        <Container maxW="container.xl">
+          <MotionStack
+            spacing={12}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
           >
-            <Box minW={{ base: "100%", lg: "340px" }} maxW={{ base: "100%", lg: "340px" }} mt={{ md: '-5px'}}>
-              <Text fontSize={{ base: '2xl', md: '4xl' }}>Full Stack Engineer</Text>
-              <Text fontSize={{ base: '2xl', md: '4xl' }}>@ Fly.io</Text>
-              <Text fontSize={{ base: 'md', md: 'xl' }} mt={'1em'}>August 2022 - September 2025</Text>
-            </Box>
-            <Box flex={1}>
-              <Box fontSize={{ base: 'lg', md: '3xl' }} mb={2} mr={{ md: 20}}>
-                Technologies: Elixir, Phoenix Liveview, JavaScript, Ruby, Go, Postgres, Docker, Flyctl, HTML5, TailwindCSS, Git, Github, Slack
-              </Box>
-              <UnorderedList spacing={3} textAlign={'start'} fontSize={{ base: 'md', md: 'lg' }}>
-                <ListItem>
-                  Architected complex database schemas and queries in PostgreSQL, ensuring data integrity and efficient data retrieval
-                </ListItem>
-                <ListItem>
-                  Restructured and implemented an upgraded OAuth authentication system, enhancing application security and improving user authentication experience by 30%.
-                </ListItem>
-                <ListItem>
-                  Collaborated with frontend and backend teams to architect and implement RESTful and GraphQL APIs, ensuring smooth integration and data consistency.
-                </ListItem>
-                <ListItem>
-                  Engineered scalable Ruby applications, optimizing performance and ensuring robustness for high-traffic scenarios.
-                </ListItem>
-              </UnorderedList>
-            </Box>
-          </Stack>
-        </Box>
+            <MotionText
+              as="h2"
+              fontSize={{ base: "3xl", md: "4xl" }}
+              textAlign="center"
+              bgGradient={`linear(to-r, ${gradientStart}, ${gradientEnd})`}
+              bgClip="text"
+              variants={scaleIn}
+            >
+              Experience
+            </MotionText>
 
-        {/* Experience 3 */}
-        <Box id='past-experience-3' w='full' py={{ base: 6, md: '3em' }} px={{ base: 4, md: 8 }}>
-          <Stack
-            direction={{ base: "column", lg: "row" }}
-            // maxW={{ md: "1650px", lg: "1900px"}}
-            maxW="1450px"
-            mx="auto"
-            align="flex-start"
-            // spacing={{ base: 6, lg: 16 }}
-            gap={{ md: '10em'}}
+            {/* Experience Cards */}
+            <Stack spacing={8}>
+              {/* Fly.io Experience */}
+              <MotionBox
+                p={8}
+                bg={cardBg}
+                borderRadius="xl"
+                boxShadow={`0 4px 20px rgba(0, 255, 157, 0.1)`}
+                border="1px"
+                borderColor={borderColor}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+                whileHover={{
+                  transform: 'translateY(-4px)',
+                  boxShadow: `0 8px 30px rgba(0, 255, 157, 0.15)`,
+                  borderColor: accentColor,
+                  animation: `${glowAnimation} 2s infinite`,
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                <Grid templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={8}>
+                  <GridItem>
+                    <VStack align="start" spacing={2}>
+                      <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold">Full Stack Engineer</Text>
+                      <Text fontSize={{ base: "xl", md: "2xl" }} color={accentColor}>@ Fly.io</Text>
+                      <Text color="gray.400">August 2022 - Present</Text>
+                    </VStack>
+                  </GridItem>
+                  <GridItem>
+                    <Stack spacing={4}>
+                      <Flex wrap="wrap" gap={2}>
+                        {['Elixir', 'Phoenix', 'JavaScript', 'Ruby', 'Go', 'Postgres', 'Docker'].map((tech) => (
+                          <Box
+                            key={tech}
+                            px={3}
+                            py={1}
+                            borderRadius="full"
+                            bg="rgba(0, 255, 157, 0.1)"
+                            color={accentColor}
+                            fontSize="sm"
+                            fontWeight="medium"
+                          >
+                            {tech}
+                          </Box>
+                        ))}
+                      </Flex>
+                      <UnorderedList spacing={2} color="gray.300">
+                        <ListItem>Architected complex database schemas and queries in PostgreSQL</ListItem>
+                        <ListItem>Restructured OAuth authentication system, improving user experience by 30%</ListItem>
+                        <ListItem>Collaborated on RESTful and GraphQL API implementation</ListItem>
+                        <ListItem>Engineered scalable Ruby applications for high-traffic scenarios</ListItem>
+                      </UnorderedList>
+                    </Stack>
+                  </GridItem>
+                </Grid>
+              </MotionBox>
+
+              {/* App Academy Experience */}
+              <MotionBox
+                p={8}
+                bg={cardBg}
+                borderRadius="xl"
+                boxShadow={`0 4px 20px rgba(0, 255, 157, 0.1)`}
+                border="1px"
+                borderColor={borderColor}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+                whileHover={{
+                  transform: 'translateY(-4px)',
+                  boxShadow: `0 8px 30px rgba(0, 255, 157, 0.15)`,
+                  borderColor: accentColor,
+                  animation: `${glowAnimation} 2s infinite`,
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                <Grid templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={8}>
+                  <GridItem>
+                    <VStack align="start" spacing={2}>
+                      <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold">Software Engineering Fellow</Text>
+                      <Text fontSize={{ base: "xl", md: "2xl" }} color={accentColor}>@ App Academy</Text>
+                      <Text color="gray.400">March 2022 - August 2022</Text>
+                    </VStack>
+                  </GridItem>
+                  <GridItem>
+                    <Stack spacing={4}>
+                      <Flex wrap="wrap" gap={2}>
+                        {['JavaScript', 'React', 'Redux', 'Node.js', 'Express', 'PostgreSQL', 'Python', 'Flask'].map((tech) => (
+                          <Box
+                            key={tech}
+                            px={3}
+                            py={1}
+                            borderRadius="full"
+                            bg="rgba(0, 255, 157, 0.1)"
+                            color={accentColor}
+                            fontSize="sm"
+                            fontWeight="medium"
+                          >
+                            {tech}
+                          </Box>
+                        ))}
+                      </Flex>
+                      <UnorderedList spacing={2} color="gray.300">
+                        <ListItem>Developed full-stack applications using modern JavaScript frameworks and libraries</ListItem>
+                        <ListItem>Implemented RESTful APIs and database schemas using PostgreSQL</ListItem>
+                        <ListItem>Created responsive user interfaces with React and Redux</ListItem>
+                        <ListItem>Collaborated with peers on group projects using Git and GitHub</ListItem>
+                      </UnorderedList>
+                    </Stack>
+                  </GridItem>
+                </Grid>
+              </MotionBox>
+
+              {/* Freelance Experience */}
+              <MotionBox
+                p={8}
+                bg={cardBg}
+                borderRadius="xl"
+                boxShadow={`0 4px 20px rgba(0, 255, 157, 0.1)`}
+                border="1px"
+                borderColor={borderColor}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+                whileHover={{
+                  transform: 'translateY(-4px)',
+                  boxShadow: `0 8px 30px rgba(0, 255, 157, 0.15)`,
+                  borderColor: accentColor,
+                  animation: `${glowAnimation} 2s infinite`,
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                <Grid templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={8}>
+                  <GridItem>
+                    <VStack align="start" spacing={2}>
+                      <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold">Software Engineer</Text>
+                      <Text fontSize={{ base: "xl", md: "2xl" }} color={accentColor}>@ Freelance</Text>
+                      <Text color="gray.400">January 2020 - Current</Text>
+                    </VStack>
+                  </GridItem>
+                  <GridItem>
+                    <Stack spacing={4}>
+                      <Flex wrap="wrap" gap={2}>
+                        {['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Node.js', 'GraphQL', 'Vercel', 'Azure', 'Docker', 'MS SQL Server'].map((tech) => (
+                          <Box
+                            key={tech}
+                            px={3}
+                            py={1}
+                            borderRadius="full"
+                            bg="rgba(0, 255, 157, 0.1)"
+                            color={accentColor}
+                            fontSize="sm"
+                            fontWeight="medium"
+                          >
+                            {tech}
+                          </Box>
+                        ))}
+                      </Flex>
+                      <UnorderedList spacing={2} color="gray.300">
+                        <ListItem>Architected scalable full-stack solutions using JavaScript, TypeScript, REST and GraphQL APIs, reducing API response times by up to 40%</ListItem>
+                        <ListItem>Deployed applications to Vercel and Azure, utilizing CI/CD pipelines and environment configs to streamline releases and maintain 99.9% uptime</ListItem>
+                        <ListItem>Delivered production-ready interfaces styled with Tailwind CSS, ensuring mobile-first responsiveness and WCAG 2.1 accessibility compliance</ListItem>
+                        <ListItem>Consulted on technical architecture, tooling, and best practices for mid-sized engineering teams</ListItem>
+                      </UnorderedList>
+                    </Stack>
+                  </GridItem>
+                </Grid>
+              </MotionBox>
+
+              {/* Professional Basketball Experience */}
+              <MotionBox
+                p={8}
+                bg={cardBg}
+                borderRadius="xl"
+                boxShadow={`0 4px 20px rgba(0, 255, 157, 0.1)`}
+                border="1px"
+                borderColor={borderColor}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+                whileHover={{
+                  transform: 'translateY(-4px)',
+                  boxShadow: `0 8px 30px rgba(0, 255, 157, 0.15)`,
+                  borderColor: accentColor,
+                  animation: `${glowAnimation} 2s infinite`,
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                <Grid templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={8}>
+                  <GridItem>
+                    <VStack align="start" spacing={2}>
+                      <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold">Professional Basketball Player</Text>
+                      <Text fontSize={{ base: "xl", md: "2xl" }} color={accentColor}>@ Various Teams</Text>
+                      <Text color="gray.400">2018 - 2022</Text>
+                    </VStack>
+                  </GridItem>
+                  <GridItem>
+                    <Stack spacing={4}>
+                      <Flex wrap="wrap" gap={2}>
+                        {['Leadership', 'Teamwork', 'Communication', 'Discipline', 'Adaptability'].map((skill) => (
+                          <Box
+                            key={skill}
+                            px={3}
+                            py={1}
+                            borderRadius="full"
+                            bg="rgba(0, 255, 157, 0.1)"
+                            color={accentColor}
+                            fontSize="sm"
+                            fontWeight="medium"
+                          >
+                            {skill}
+                          </Box>
+                        ))}
+                      </Flex>
+                      <UnorderedList spacing={2} color="gray.300">
+                        <ListItem>Demonstrated exceptional leadership skills in high-pressure environments</ListItem>
+                        <ListItem>Collaborated effectively with diverse international teams</ListItem>
+                        <ListItem>Maintained peak physical and mental performance through rigorous training</ListItem>
+                        <ListItem>Adapted quickly to different playing styles and team dynamics</ListItem>
+                      </UnorderedList>
+                    </Stack>
+                  </GridItem>
+                </Grid>
+              </MotionBox>
+            </Stack>
+          </MotionStack>
+        </Container>
+      </Box>
+
+      {/* Skills Section */}
+      <Box id="skills" py={20} bg={cardBg} position="relative">
+        <Container maxW="container.xl">
+          <MotionStack
+            spacing={12}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
           >
-            <Box minW={{ base: "100%", lg: "340px" }} maxW={{ base: "100%", lg: "340px" }}  mt={{ md: '-5px'}}>
-              <Text fontSize={{ base: '2xl', md: '4xl' }}>Full Stack Engineer</Text>
-              <Text fontSize={{ base: '2xl', md: '4xl' }}>Intern @ Fly.io</Text>
-              <Text fontSize={{ base: 'md', md: 'xl' }} mt={'1em'}>May 2022 - August 2022</Text>
-            </Box>
-            <Box flex={1}>
-              <Box fontSize={{ base: 'lg', md: '3xl' }} mb={2} mr={{ md: 20}}>
-                Technologies: Elixir, Phoenix Liveview, JavaScript, Ruby, Go, Postgres, Docker, Flyctl, HTML5, TailwindCSS, Git, Github, Slack
-              </Box>
-              <UnorderedList spacing={3} textAlign={'start'} fontSize={{ base: 'md', md: 'lg' }}>
-                <ListItem>
-                  Leveraged Phoenix LiveView to create real-time, interactive web applications, enhancing user engagement and reducing the need for client-side JavaScript.
-                </ListItem>
-                <ListItem>
-                  Built reusable Elixir libraries and components, speeding up development cycles and ensuring consistent functionality across projects.
-                </ListItem>
-                <ListItem>
-                  Participated in code reviews and provided feedback to other developers, helping to improve code quality and maintainability
-                </ListItem>
-              </UnorderedList>
-            </Box>
-          </Stack>
-        </Box>
-        <Box id='skills' w="full" pb={'1em'} pt={'1em'} px={{ base: 4, md: 8 }}>
-        <Box>
-          <Text textAlign={'left'} pl={{ base: 4, md: '3em' }} fontSize={{ base: '2xl', md: '4xl' }} pb={'0.5em'}>Skills</Text>
-          <Box w={{ base: '90%', md: '90%' }} h={'2px'} ml={{ base: 4, md: '5.4em' }} bg='white'></Box>
-          <Box w={{ base: '90%', md: '90%' }} h={'2px'} ml={{ base: 4, md: '5.4em' }} bg='black'></Box>
-        </Box>
-          <Center id='tech-stack-1' mt={'2em'}>
-            <Flex wrap="wrap" justify="center" gap={{ base: 2, md: 4 }}>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/javascript/original.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/python/original-wordmark.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/elixir/original-wordmark.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/ruby/original-wordmark.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/go/original-wordmark.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/html5/original-wordmark.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/css3/original-wordmark.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/express/original.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/nodejs/original-wordmark.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/react/original.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/redux/original.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/phoenix/original-wordmark.svg"></Image>
-            </Flex>
-          </Center>
+            <MotionText
+              as="h2"
+              fontSize={{ base: "3xl", md: "4xl" }}
+              textAlign="center"
+              bgGradient={`linear(to-r, ${gradientStart}, ${gradientEnd})`}
+              bgClip="text"
+              variants={scaleIn}
+            >
+              Skills & Technologies
+            </MotionText>
 
-          <Center id='tech-stack-2' py={'2em'}>
-            <Flex wrap="wrap" justify="center" gap={{ base: 2, md: 4 }}>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/rails/original-wordmark.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/postgresql/original-wordmark.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/flask/original.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/sqlalchemy/original.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/sequelize/original.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/docker/original-wordmark.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/amazonwebservices/original-wordmark.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/tailwindcss/original-wordmark.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/git/original.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/github/original-wordmark.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/heroku/original.svg"></Image>
-              <Image boxSize={{ base: '60px', md: '100px' }} src="https://devicon-website.vercel.app/api/google/original.svg"></Image>
-            </Flex>
-          </Center>
-        </Box>
+            <Grid
+              templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)', lg: 'repeat(4, 1fr)' }}
+              gap={6}
+            >
+              {[
+                { name: 'JavaScript', icon: 'https://devicon-website.vercel.app/api/javascript/original.svg' },
+                { name: 'Python', icon: 'https://devicon-website.vercel.app/api/python/original-wordmark.svg' },
+                { name: 'Elixir', icon: 'https://devicon-website.vercel.app/api/elixir/original-wordmark.svg' },
+                { name: 'Ruby', icon: 'https://devicon-website.vercel.app/api/ruby/original-wordmark.svg' },
+                { name: 'Go', icon: 'https://devicon-website.vercel.app/api/go/original-wordmark.svg' },
+                { name: 'HTML5', icon: 'https://devicon-website.vercel.app/api/html5/original-wordmark.svg' },
+                { name: 'CSS3', icon: 'https://devicon-website.vercel.app/api/css3/original-wordmark.svg' },
+                { name: 'React', icon: 'https://devicon-website.vercel.app/api/react/original.svg' },
+                { name: 'Redux', icon: 'https://devicon-website.vercel.app/api/redux/original.svg' },
+                { name: 'Express', icon: 'https://devicon-website.vercel.app/api/express/original.svg' },
+                { name: 'Node.js', icon: 'https://devicon-website.vercel.app/api/nodejs/original-wordmark.svg' },
+                { name: 'Phoenix', icon: 'https://devicon-website.vercel.app/api/phoenix/original-wordmark.svg' },
+                { name: 'Rails', icon: 'https://devicon-website.vercel.app/api/rails/original-wordmark.svg' },
+                { name: 'PostgreSQL', icon: 'https://devicon-website.vercel.app/api/postgresql/original-wordmark.svg' },
+                { name: 'Flask', icon: 'https://devicon-website.vercel.app/api/flask/original.svg' },
+                { name: 'SQLAlchemy', icon: 'https://devicon-website.vercel.app/api/sqlalchemy/original.svg' },
+                { name: 'Sequelize', icon: 'https://devicon-website.vercel.app/api/sequelize/original.svg' },
+                { name: 'Docker', icon: 'https://devicon-website.vercel.app/api/docker/original-wordmark.svg' },
+                { name: 'AWS', icon: 'https://devicon-website.vercel.app/api/amazonwebservices/original-wordmark.svg' },
+                { name: 'Tailwind CSS', icon: 'https://devicon-website.vercel.app/api/tailwindcss/original-wordmark.svg' },
+                { name: 'Git', icon: 'https://devicon-website.vercel.app/api/git/original.svg' },
+                { name: 'GitHub', icon: 'https://devicon-website.vercel.app/api/github/original-wordmark.svg' },
+                { name: 'Heroku', icon: 'https://devicon-website.vercel.app/api/heroku/original.svg' },
+                { name: 'Google Cloud', icon: 'https://devicon-website.vercel.app/api/google/original.svg' }
+              ].map((tech) => (
+                <MotionBox
+                  key={tech.name}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <VStack
+                    p={4}
+                    bg={bgColor}
+                    borderRadius="xl"
+                    border="1px"
+                    borderColor={borderColor}
+                    {...skillCardStyle}
+                  >
+                    <Image
+                      src={tech.icon}
+                      alt={tech.name}
+                      boxSize={{ base: '50px', md: '70px' }}
+                      filter="brightness(0) invert(1)"
+                      {...imageStyle}
+                    />
+                    <Text fontSize="sm" color="gray.400">{tech.name}</Text>
+                  </VStack>
+                </MotionBox>
+              ))}
+            </Grid>
+          </MotionStack>
+        </Container>
+      </Box>
 
-        <Box id='projects' px={{ base: 4, md: 8 }}>
-          <Text textAlign={'left'} pl={{ base: 4, md: '3em' }} fontSize={{ base: '2xl', md: '4xl' }} pb={'0.5em'}>Projects</Text>
-          <Box w={{ base: '90%', md: '90%' }} h={'2px'} ml={{ base: 4, md: '5.4em' }} bg='white'></Box>
-          <Box w={{ base: '90%', md: '90%' }} h={'2px'} ml={{ base: 4, md: '5.4em' }} bg='black'></Box>
-        </Box>
-        <Projects />
-        <Box id='networks' w="full" py={{ base: 8, md: 12 }} px={{ base: 4, md: 8 }}>
-        <Box w={{ base: '90%', md: '90%' }} h={'2px'} ml={{ base: 4, md: '5.4em' }} bg='white'></Box>
-        <Box w={{ base: '90%', md: '90%' }} h={'2px'} ml={{ base: 4, md: '5.4em' }} bg='black' mb={'0.5em'}></Box>
-          <Stack
-            direction={{ base: "column", md: "row" }}
-            justify="space-evenly"
-            pt={'1em'}
-            spacing={{ base: 6, md: 4 }}
+      {/* Projects Section */}
+      <Box id="projects" py={20} bg={bgColor} position="relative">
+        <Container maxW="container.2xl">
+          <MotionStack
+            spacing={12}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+          >
+            <MotionText
+              as="h2"
+              fontSize={{ base: "3xl", md: "4xl" }}
+              textAlign="center"
+              bgGradient={`linear(to-r, ${gradientStart}, ${gradientEnd})`}
+              bgClip="text"
+              variants={scaleIn}
+            >
+              Featured Projects
+            </MotionText>
+            <Projects />
+          </MotionStack>
+        </Container>
+      </Box>
+
+      {/* Contact Section */}
+      <Box id="contact" py={20} bg={cardBg} position="relative">
+        <Container maxW="container.xl">
+          <MotionStack
+            spacing={8}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
             align="center"
           >
-            <VStack>
-              <Text fontSize={{ base: 'lg', md: '1.4em' }} fontWeight={'bold'}>Located In</Text>
-              <Text pt={'0.5em'} fontSize={{ base: 'md', md: '1.2em' }}>Sacramento, CA</Text>
-            </VStack>
-            <VStack>
-              <Text fontSize={{ base: 'lg', md: '1.4em' }} fontWeight={'bold'}>Networks</Text>
-              <HStack pt={'1em'} spacing={4} wrap="wrap" justify="center">
-                <Link href='https://github.com/chrisbh4'>
-                  <Icon as={FaGithub} boxSize={{ base: 8, md: 12 }} />
-                </Link>
-                <Link href='https://www.linkedin.com/in/christian-brown-8770311ba/'>
-                  <Icon as={FaLinkedin} boxSize={{ base: 8, md: 12 }} />
-                </Link>
-                <Link href="https://wellfound.com/profile/edit/overview">
-                  <Icon as={FaAngellist} boxSize={{ base: 8, md: 12 }} />
-                </Link>
-                <Link href="mailto:chrismbh4@gmail.com">
-                  <EmailIcon boxSize={{ base: 8, md: 12 }} />
-                </Link>
-              </HStack>
-            </VStack>
-            <VStack>
-              <Text fontSize={{ base: 'lg', md: '1.4em' }} fontWeight={'bold'}>Resume</Text>
-              <Link href="https://drive.google.com/file/d/1jjcvTvRAx2JS48Z5sOGADXt5JNde7aIn/view?usp=sharing">
-                <Icon as={FaIdBadge} boxSize={{ base: 6, md: 9 }} mt={'1em'} />
-              </Link>
-            </VStack>
-          </Stack>
-        </Box>
+            <MotionText
+              as="h2"
+              fontSize={{ base: "3xl", md: "4xl" }}
+              textAlign="center"
+              bgGradient={`linear(to-r, ${gradientStart}, ${gradientEnd})`}
+              bgClip="text"
+              variants={scaleIn}
+            >
+              Let's Connect
+            </MotionText>
+            <Text fontSize={{ base: "lg", md: "xl" }} textAlign="center" maxW="2xl" color="gray.300">
+              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            </Text>
+            <MotionStack
+              direction={{ base: "column", sm: "row" }}
+              spacing={6}
+              pt={4}
+              variants={fadeIn}
+            >
+              <Button
+                as="a"
+                href="mailto:chrismbh4@gmail.com"
+                size="lg"
+                bg={accentColor}
+                color={bgColor}
+                leftIcon={<EmailIcon />}
+                _hover={{
+                  bg: 'transparent',
+                  color: accentColor,
+                  border: `2px solid ${accentColor}`,
+                  transform: 'translateY(-2px)',
+                  animation: `${glowAnimation} 2s infinite`,
+                }}
+                transition="all 0.2s"
+              >
+                Email Me
+              </Button>
+              <Button
+                as="a"
+                href="https://drive.google.com/file/d/1jjcvTvRAx2JS48Z5sOGADXt5JNde7aIn/view?usp=sharing"
+                target="_blank"
+                size="lg"
+                variant="outline"
+                borderColor={accentColor}
+                color={accentColor}
+                rightIcon={<FaExternalLinkAlt />}
+                _hover={{
+                  bg: accentColor,
+                  color: bgColor,
+                  transform: 'translateY(-2px)',
+                  animation: `${glowAnimation} 2s infinite`,
+                }}
+                transition="all 0.2s"
+              >
+                View Resume
+              </Button>
+            </MotionStack>
+          </MotionStack>
+        </Container>
       </Box>
+
+      {/* Footer */}
+      <Box
+        as="footer"
+        py={8}
+        borderTop="1px"
+        borderColor={borderColor}
+        bg={bgColor}
+      >
+        <Container maxW="container.xl">
+          <Stack
+            direction={{ base: 'column', md: 'row' }}
+            justify="space-between"
+            align="center"
+            spacing={4}
+          >
+            <Text color="gray.400">© 2024 Christian Brown. All rights reserved.</Text>
+            <HStack spacing={6}>
+              {[
+                { icon: FaGithub, href: 'https://github.com/chrisbh4', label: 'GitHub' },
+                { icon: FaLinkedin, href: 'https://www.linkedin.com/in/christian-brown-8770311ba/', label: 'LinkedIn' },
+                { icon: FaAngellist, href: 'https://wellfound.com/profile/edit/overview', label: 'Wellfound' }
+              ].map((social) => (
+                <Tooltip key={social.label} label={social.label}>
+                  <IconButton
+                    as="a"
+                    href={social.href}
+                    target="_blank"
+                    aria-label={social.label}
+                    icon={<Icon as={social.icon} />}
+                    variant="ghost"
+                    size="lg"
+                    fontSize="20px"
+                    color={accentColor}
+                    _hover={{
+                      color: secondaryAccent,
+                      transform: 'translateY(-2px)',
+                      animation: `${glowAnimation} 2s infinite`,
+                    }}
+                  />
+                </Tooltip>
+              ))}
+            </HStack>
+          </Stack>
+        </Container>
+      </Box>
+    </Box>
+  );
+}
+
+// Main App component
+function App() {
+  return (
+    <ChakraProvider>
+      <AppContent />
     </ChakraProvider>
   );
 }
