@@ -179,7 +179,7 @@ function Projects() {
           scale: 1.02,        // Grow to 102% size (subtle but noticeable expansion)
           opacity: 1,         // Become fully opaque (from initial 85%)
           y: -8,              // Move up 8 pixels (creates "lifting" effect)
-          rotate: 0.5,        // Rotate 0.5 degrees (adds subtle dynamism)
+          // rotate: 0.5,        // Rotate 0.5 degrees (adds subtle dynamism)
 
           // SIZE PROPERTIES:
           width: window.innerWidth <= 820 ? '370px' : '850px',  // Responsive width (smaller on mobile)
@@ -203,10 +203,11 @@ function Projects() {
         contentTimeline.add(image, {
           marginBottom: '280px',    // Push image up by adding bottom margin
           scale: [0.95, 1.03],      // ARRAY SYNTAX: [startValue, endValue] - grows from 95% to 103%
-          rotate: [-1, 0],          // Starts slightly rotated left (-1°), straightens to 0°
+          // rotate: [-1, 0],          // Starts slightly rotated left (-1°), straightens to 0°
           opacity: [0.7, 1],        // Fades in from 70% to 100% opacity
           duration: 1800,           // 1.8 seconds for smooth animation
-          ease: 'outCubic',         // Cubic easing - smooth acceleration curve
+          ease: 'outCirc',         // Cubic easing - smooth acceleration curve
+          // ease: 'outCubic',         // Cubic easing - smooth acceleration curve
         }, 200);  // DELAY: starts 200ms after timeline begins
 
         // DESCRIPTION TEXT ANIMATION
@@ -243,7 +244,7 @@ function Projects() {
           x: [50, 0],               // Slides in from 50px to the right
           y: [15, 0],               // Slides up from 15px below
           scale: [0.9, 1],          // Grows from 90% to full size
-          rotate: [2, 0],           // Starts rotated 2° clockwise, straightens
+          rotate: [50, 0],           // Starts rotated 2° clockwise, straightens
           duration: 1700,           // 1.7 seconds
           ease: 'outQuart'          // Consistent easing
         }, 200);
@@ -284,7 +285,7 @@ function Projects() {
           scale: [1.02, 0.98],      // Shrink from expanded (102%) back to resting (98%)
           opacity: [1, 0.85],       // Fade from full opacity back to 85%
           y: [-8, 0],               // Lower from lifted position back to normal
-          rotate: [0.5, 0],         // Remove rotation back to 0°
+          // rotate: [0.5, 0],         // Remove rotation back to 0°
 
           // SIZE RETURN:
           width: '400px',           // Back to original width
