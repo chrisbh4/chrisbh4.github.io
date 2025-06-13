@@ -151,23 +151,23 @@ function Projects() {
 
       // CARD TYPE DETECTION
       // Identify which specific project card this is for theme-appropriate styling
-      const isSpudhubCard = card.classList.contains('spudhub-card');
-      const isSnkrMrktCard = card.classList.contains('snkr-mrkt-card');
-      const isGoodTunesCard = card.classList.contains('goodTunes-card');
-      const isBeachittCard = card.classList.contains('beachitt-card');
-      const isSpotifyCard = card.classList.contains('spotify-card');
+      // const isSpudhubCard = card.classList.contains('spudhub-card');
+      // const isSnkrMrktCard = card.classList.contains('snkr-mrkt-card');
+      // const isGoodTunesCard = card.classList.contains('goodTunes-card');
+      // const isBeachittCard = card.classList.contains('beachitt-card');
+      // const isSpotifyCard = card.classList.contains('spotify-card');
 
       // THEME-APPROPRIATE SHADOW COLORS
       // Function that returns the correct shadow color based on card type
       // Each project has a shadow that matches its brand color scheme
-      const getShadowColor = () => {
-        if (isSpudhubCard) return '0 20px 45px rgba(160, 178, 158, 0.4)';  // Green tint for agricultural theme
-        if (isSnkrMrktCard) return '0 20px 45px rgba(35, 31, 32, 0.4)';    // Dark shadow for sneaker marketplace
-        if (isGoodTunesCard) return '0 20px 45px rgba(250, 74, 24, 0.4)';  // Orange glow for music app
-        if (isBeachittCard) return '0 20px 45px rgba(59, 144, 200, 0.4)';  // Blue aura for beach rentals
-        if (isSpotifyCard) return '0 20px 45px rgba(19, 145, 63, 0.4)';    // Spotify green
-        return '0 25px 50px rgba(0,0,0,0.4)';                              // Default black shadow
-      };
+      // const getShadowColor = () => {
+      //   if (isSpudhubCard) return '0 20px 45px rgba(160, 178, 158, 0.4)';  // Green tint for agricultural theme
+      //   if (isSnkrMrktCard) return '0 20px 45px rgba(35, 31, 32, 0.4)';    // Dark shadow for sneaker marketplace
+      //   if (isGoodTunesCard) return '0 20px 45px rgba(250, 74, 24, 0.4)';  // Orange glow for music app
+      //   if (isBeachittCard) return '0 20px 45px rgba(59, 144, 200, 0.4)';  // Blue aura for beach rentals
+      //   if (isSpotifyCard) return '0 20px 45px rgba(19, 145, 63, 0.4)';    // Spotify green
+      //   return '0 25px 50px rgba(0,0,0,0.4)';                              // Default black shadow
+      // };
 
       // MOUSE ENTER HANDLER (HOVER IN ANIMATION)
       // This function runs when user hovers over a project card
@@ -266,7 +266,7 @@ function Projects() {
         // Creates the themed shadow glow around the card
         animate(card, {
           // ARRAY SYNTAX for boxShadow: [startShadow, endShadow]
-          boxShadow: ['0px 0px 5px 2px rgb(97, 97, 97)', getShadowColor()],
+          // boxShadow: ['0px 0px 5px 2px rgb(97, 97, 97)', getShadowColor()],
           duration: 1600,           // 1.6 seconds for gradual glow buildup
           ease: 'outQuart'          // Smooth transition
         });
@@ -297,7 +297,7 @@ function Projects() {
 
           // VISUAL EFFECTS RETURN:
           filter: ['brightness(1.1)', 'brightness(0.9)'], // Dim back to 90%
-          boxShadow: [getShadowColor(), '0px 0px 5px 2px rgb(97, 97, 97)'] // Remove glow
+          // boxShadow: [getShadowColor(), '0px 0px 5px 2px rgb(97, 97, 97)'] // Remove glow
         });
 
         // CONTENT HIDING ANIMATION
