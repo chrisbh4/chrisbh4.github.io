@@ -189,7 +189,7 @@ function Projects() {
           height: '600px',    // Fixed height for expanded state
 
           // TIMING PROPERTIES:
-          duration: 2000,     // 2 seconds for smooth, luxurious expansion
+          duration: 2400,     // 2.4 seconds for smooth, luxurious expansion
           ease: 'outCirc',    // Circular easing - starts fast, ends very smoothly
 
           // VISUAL EFFECTS:
@@ -313,11 +313,11 @@ function Projects() {
           right: '-300px',          // Move far off-screen to the right
           bottom: '0px',            // Return to bottom edge
           opacity: [1, 0],          // Fade out completely
-          y: [0, -25],              // Move up while fading (adds elegance)
+          // y: [0, -25],              // Move up while fading (adds elegance)
           scale: [1, 0.7],          // Shrink to 70% while disappearing
           rotate: [0, 6],           // Add 6° rotation while exiting
-          duration: 1100,           // 1.1 seconds
-          ease: 'inQuart'           // "In" easing - starts slow, accelerates (opposite of entrance)
+          duration: 1400,           // 1.4 seconds
+          ease: 'outCubic'           // "In" easing - starts slow, accelerates (opposite of entrance)
         }, 100); // DELAY: 100ms after timeline starts
 
         // FEATURES LIST SLIDES OUT
@@ -325,12 +325,12 @@ function Projects() {
           top: '-205px',            // Move off-screen upward
           right: '-250px',          // Move off-screen to the right
           opacity: [1, 0],          // Fade out
-          x: [0, 70],               // Slide right while fading
-          y: [0, -20],              // Slide up while fading
+          // x: [0, 70],               // Slide right while fading
+          // y: [0, -20],              // Slide up while fading
           scale: [1, 0.8],          // Shrink to 80%
           rotate: [0, -3],          // Rotate counter-clockwise while exiting
-          duration: 1100,           // 1.1 seconds
-          ease: 'inQuart'           // Consistent exit easing
+          duration: 1400,           // 1.4 seconds
+          ease: 'outCubic'           // Consistent exit easing
         }, 100);
 
         // LINKS FADE OUT
@@ -341,8 +341,8 @@ function Projects() {
           x: [0, -40],              // Slide left while fading
           y: [0, 20],               // Slide down while fading
           scale: [1, 0.7],          // Shrink to 70%
-          duration: 1100,           // 1.1 seconds
-          ease: 'inCubic'           // Cubic "in" easing
+          duration: 1400,           // 1.4 seconds
+          ease: 'outCubic'           // Cubic "in" easing
         }, 100);
 
         // DESCRIPTION SLIDES BACK
@@ -352,7 +352,7 @@ function Projects() {
           opacity: [1, 0.9],        // Slight fade (not completely transparent)
           y: [0, 12],               // Slide down slightly
           scale: [1, 0.95],         // Shrink slightly to 95%
-          duration: 1200,           // 1.2 seconds (slightly longer)
+          duration: 1400,           // 1.4 seconds (slightly longer)
           ease: 'inOutQuad'         // "InOut" easing - smooth both ends
         }, 100);
 
@@ -361,7 +361,7 @@ function Projects() {
           marginBottom: '0px',      // Remove bottom margin
           scale: [1.03, 1],         // Shrink from 103% back to normal
           opacity: [1, 0.95],       // Slight fade to 95%
-          duration: 1200,           // 1.2 seconds
+          duration: 1400,           // 1.4 seconds
           ease: 'inOutQuart'        // Smooth quartic curve both directions
         }, 100);
       };
