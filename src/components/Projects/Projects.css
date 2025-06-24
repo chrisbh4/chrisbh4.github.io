@@ -133,11 +133,12 @@
 
 .project-card:hover > .spudhub-image {
   padding-right: 20px;
+  margin-top: 10px;
 }
 
 .project-card:hover > .spudhub-description {
-  padding-bottom: 60px;
   padding-right: 20px;
+  margin-top: 40px;
 }
 
 .snkr-mrkt-image  {
@@ -153,7 +154,12 @@
 }
 
 .spudhub-image img {
-  height: auto;
+  /* height: auto; */
+  max-height: 200px;
+}
+
+.spudhub-project-page{
+  z-index: 1;
 }
 
 .spudhub-description {
