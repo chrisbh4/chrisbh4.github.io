@@ -92,26 +92,9 @@ docker run -p 3000:3000 portfolio
 
 This project is configured for deployment to Fly.io using GitHub Actions for CI/CD.
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## 👤 Author
 
-[Your Name]
-- Website: [Your website]
-- GitHub: [@yourusername]
-- LinkedIn: [Your LinkedIn]
-
-## 🤝 Contributing
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## ✨ Acknowledgments
-
-- Thanks to all the open-source libraries and tools used in this project
-- Special thanks to the React and Chakra UI communities
+Christian Brown
+- Website: https://christianbrown.io
+- GitHub: @chrisbh4
+- LinkedIn: https://www.linkedin.com/in/christian-brown-8770311ba
