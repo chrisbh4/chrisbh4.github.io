@@ -409,17 +409,17 @@ function Projects() {
             <img src="https://imgur.com/Vo3nCh3.png" alt="project" />
           </div>
           <div className="project-page spudhub-project-page">
-            <img src="https://imgur.com/kc1SbA6.png" alt="project page" />
+            <img src="https://imgur.com/PhPfs4O.png" alt="project page" />
           </div>
           <div className="project-description spudhub-description">
           Locally grown produce from farmers who have excess goods to share.
           </div>
           <div className="project-links">
-            <a href="https://spud-hub.fly.dev">
+            <a href="https://farm-to-fork.fly.dev/">
               Live App
               <i className="fas fa-globe"></i>
             </a>
-            <a href="https://github.com/michellekontoff/spudhub">
+            <a href="https://github.com/chrisbh4/farm-to-fork">
               GitHub
               <i className="fab fa-github" />
             </a>
@@ -657,7 +657,7 @@ function Projects() {
             <img src="https://imgur.com/w5U7FoB.png" alt="project page" />
           </div>
           <div className="project-page beachitt-page">
-            <img src="https://imgur.com/LZ8DYx3.png" alt="project page" />
+            <img src="https://imgur.com/3iFEEyv.png" alt="project page" />
           </div>
           <div className="project-description beachitt-description">
             Find Find your next international beach getaway.

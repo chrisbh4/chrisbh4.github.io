@@ -29,18 +29,20 @@ import Projects from './components/Projects';
 
 
 function App() {
-
   function handleClick(event, id) {
-    event.preventDefault(); // Prevent the default click behavior
-    const element = document.getElementById(id);
+    // On desktop, keep the existing animation behavior for project cards
+    const target = event.target;
+    const card = target.closest('.project-card');
+    if (!card) return;
 
-    if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: "center"
-        });
-    }
-}
+    const rect = card.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    card.style.setProperty('--x', `${x}px`);
+    card.style.setProperty('--y', `${y}px`);
+    card.classList.add('ripple');
+  }
 
   return (
     <ChakraProvider >
