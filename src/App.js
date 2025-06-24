@@ -132,13 +132,15 @@ function App() {
         </Box>
           <VStack spacing={6} align='center' fontSize={{ base: 'lg', md: '2xl' }} ml={{ md: '5em'}} pt={'1.5em'} px={{ base: 4, md: '5em', lg: '15em' }}>
             <Box w={{ base: '100%', md: '90%' }}>
-              <Text align={'start'}>Before deep diving into software development, I attended Bacone College in Oklahoma on a basketball scholarship.
-                During my free time I enjoy playing basketball, cooking new recipes, and leveling up my coding skills.
+              <Text align={'start'}>I'm a Full-Stack Software Engineer with a background in competitive athletics and a passion for building high-impact, user-focused applications. I thrive in fast-paced environments where clear communication, collaboration, and rapid iteration are key to delivering results.
               </Text>
             </Box>
             <Box w={{ base: '100%', md: '90%' }}>
-              <Text align={'start'}>Ever since I've built my first full stack application my passion for code has sky rocketed. I've always enjoyed working with new tech or
-                    just build new apps ideas that just randomly pop into my head. I thrive working in a fast-pace enviorment that requires goal oriented communication.
+              <Text align={'start'}>Before transitioning into tech, I earned a basketball scholarship to Bacone College in Oklahoma, an experience that shaped my work ethic and resilience. Since then, I've channeled that same drive into software development, building full-stack applications that solve real-world problems and push me to grow technically and creatively.
+              </Text>
+            </Box>
+            <Box w={{ base: '100%', md: '90%' }}>
+              <Text align={'start'}>I specialize in modern JavaScript frameworks, backend systems, and scalable architecture. Outside of work, you’ll find me on the basketball court, experimenting in the kitchen, or exploring new technologies through side projects.
               </Text>
             </Box>
           </VStack>
