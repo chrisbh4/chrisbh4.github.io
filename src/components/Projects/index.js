@@ -427,9 +427,11 @@ function Projects() {
           <div className="project-features-list">
             <div className="project-features-title">Features List</div>
             <Box textAlign={'start'} pl={'3em'}>
-                <Text>- Products Listings (CRUD)</Text>
+                <Text pt={'1em'}>- Flask REST API</Text>
+                <Text pt={'1em'}>- Product listings (CRUD)</Text>
+                <Text pt={'1em'}>- AWS S3 for Image uploads</Text>
                 <Text pt={'1em'}>- Shopping Cart (CRUD)</Text>
-                <Text pt={'1em'}>- Product Reviews (CRUD)</Text>
+                <Text pt={'1em'}>- Order Management </Text>
                 <Text pt={'1em'}>- Sign up / in with email</Text>
               </Box>
           </div>
@@ -623,11 +625,10 @@ function Projects() {
             <div>
               <Box textAlign={'start'} pl={'4em'}>
                 <Text>- Spotify API</Text>
-                <Text>- Spotify Web Playback SDK integration</Text>
-                <Text>- Automated streaming capability</Text>
-                <Text>- Real-time stream counting</Text>
-                <Text>- OAuth2 authentication implementation</Text>
-                <Text>- Automatic token refresh functionality</Text>
+                <Text pt={'1em'}>- Spotify Web Playback SDK integration</Text>
+                <Text pt={'1em'}>- Automated streaming capability</Text>
+                <Text pt={'1em'}>- Real-time stream counting</Text>
+                <Text pt={'1em'}>- Automatic token refresh functionality</Text>
               </Box>
             </div>
 
@@ -676,10 +677,11 @@ function Projects() {
             <div className="project-features-title">Features List</div>
             <div>
               <Box textAlign={'start'} pl={'4em'}>
-                <Text>- Google Maps API</Text>
-                <Text pt={'1em'}>- AWS S3 Image uploads</Text>
-                <Text pt={'1em'}>- Rental listings (CRUD)</Text>
-                <Text pt={'1em'}>- Rental reviews (CRUD)</Text>
+                <Text pt={'1em'}>- Google Maps API Integration</Text>
+                <Text pt={'1em'}>- AWS S3 Image Storage</Text>
+                <Text pt={'1em'}>- Property Management (CRUD)</Text>
+                <Text pt={'1em'}>- Review & Rating System (CRUD)</Text>
+                <Text pt={'1em'}>- Booking Management System (CRUD)</Text>
               </Box>
             </div>
           </div>
