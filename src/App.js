@@ -71,7 +71,7 @@ function App() {
               <Link href='#past-experience' style={{ textDecoration: "none" }} onClick={(e) => handleClick(e, 'past-experience')} fontWeight={'medium'} fontSize={{ base: 'lg', md: '2xl' }}>Past Experiences</Link>
               <Link href='#skills' style={{ textDecoration: "none" }} onClick={(e) => handleClick(e, 'skills')} fontWeight={'medium'} fontSize={{ base: 'lg', md: '2xl' }}>Skills</Link>
               <Link href='#projects' style={{ textDecoration: "none" }} onClick={(e) => handleClick(e, 'projects')} fontWeight={'medium'} fontSize={{ base: 'lg', md: '2xl' }}>Projects</Link>
-              <Link href='https://drive.google.com/file/d/1jjcvTvRAx2JS48Z5sOGADXt5JNde7aIn/view?usp=sharing' style={{ textDecoration: "none" }}
+              <Link href='https://drive.google.com/file/d/1XufQ1mrhLEo0wNOf8UehETYVc2D9dvtO/view?usp=sharing' style={{ textDecoration: "none" }}
                     fontWeight={'medium'} fontSize={{ base: 'lg', md: '2xl' }}
                 >Resume
               </Link>
@@ -114,7 +114,7 @@ function App() {
                 <Link href="https://wellfound.com/profile/edit/overview">
                   <Icon as={FaAngellist} boxSize={{ base: 8, md: 12 }} />
                 </Link>
-                <Link href="https://drive.google.com/file/d/1jjcvTvRAx2JS48Z5sOGADXt5JNde7aIn/view?usp=sharing">
+                <Link href="https://drive.google.com/file/d/1XufQ1mrhLEo0wNOf8UehETYVc2D9dvtO/view?usp=sharing">
                   <Icon as={FaIdBadge} boxSize={{ base: 8, md: 12 }} />
                 </Link>
                 <Link href="mailto:chrismbh4@gmail.com">
@@ -132,13 +132,15 @@ function App() {
         </Box>
           <VStack spacing={6} align='center' fontSize={{ base: 'lg', md: '2xl' }} ml={{ md: '5em'}} pt={'1.5em'} px={{ base: 4, md: '5em', lg: '15em' }}>
             <Box w={{ base: '100%', md: '90%' }}>
-              <Text align={'start'}>Before deep diving into software development, I attended Bacone College in Oklahoma on a basketball scholarship.
-                During my free time I enjoy playing basketball, cooking new recipes, and leveling up my coding skills.
+              <Text align={'start'}>I'm a Full-Stack Software Engineer with a background in competitive athletics and a passion for building high-impact, user-focused applications. I thrive in fast-paced environments where clear communication, collaboration, and rapid iteration are key to delivering results.
               </Text>
             </Box>
             <Box w={{ base: '100%', md: '90%' }}>
-              <Text align={'start'}>Ever since I've built my first full stack application my passion for code has sky rocketed. I've always enjoyed working with new tech or
-                    just build new apps ideas that just randomly pop into my head. I thrive working in a fast-pace enviorment that requires goal oriented communication.
+              <Text align={'start'}>Before transitioning into tech, I earned a basketball scholarship to Bacone College in Oklahoma, an experience that shaped my work ethic and resilience. Since then, I've channeled that same drive into software development, building full-stack applications that solve real-world problems and push me to grow technically and creatively.
+              </Text>
+            </Box>
+            <Box w={{ base: '100%', md: '90%' }}>
+              <Text align={'start'}>I specialize in modern JavaScript frameworks, backend systems, and scalable architecture. Outside of work, you’ll find me on the basketball court, experimenting in the kitchen, or exploring new technologies through side projects.
               </Text>
             </Box>
           </VStack>
@@ -163,8 +165,8 @@ function App() {
           >
             <Box minW={{ base: "100%", lg: "340px" }} maxW={{ base: "100%", lg: "340px" }} mt={{ md: '-5px'}} >
               <Text fontSize={{ base: '2xl', md: '4xl' }}>Software Engineer</Text>
-              <Text fontSize={{ base: '2xl', md: '4xl' }}>@ Freelance</Text>
-              <Text fontSize={{ base: 'md', md: 'xl' }} mt={'1em'}>January 2020 - current</Text>
+              <Text fontSize={{ base: '2xl', md: '4xl' }}>@ Stealth Startup</Text>
+              <Text fontSize={{ base: 'md', md: 'xl' }} mt={'1em'}>September 2024 - current</Text>
             </Box>
             <Box flex={1}>
               <Box fontSize={{ base: 'lg', md: '3xl' }} mb={2} mr={{ md: 30}}>
@@ -172,16 +174,19 @@ function App() {
               </Box>
               <UnorderedList spacing={3} textAlign={'start'} fontSize={{ base: 'md', md: 'lg' }}>
                 <ListItem>
-                  Architected scalable full-stack solutions using JavaScript, TypeScript, REST and GraphQL APIs, reducing API response times by up to 40%.
+                  Developed scalable full-stack solutions using JavaScript, TypeScript, and REST/GraphQL APIs, which aligned with best practices in full stack and web architecture and reduced API response times by up to 40%.
                 </ListItem>
                 <ListItem>
-                  Deployed applications to Vercel and Azure, utilizing CI/CD pipelines and environment configs to streamline releases and maintain 99.9% uptime.
+                  Built autonomous AI agents using JavaScript and Langchain.js to automate research, web scraping, and document understanding workflows across logistic applications.
                 </ListItem>
                 <ListItem>
-                  Delivered production-ready interfaces styled with Tailwind CSS, ensuring mobile-first responsiveness and WCAG 2.1 accessibility compliance.
+                  Monitored AI agent behavior using logging middleware and custom analytics, iterating on tool strategies and prompt designs to reduce hallucination rates by 25%.
                 </ListItem>
                 <ListItem>
-                  Consulted on technical architecture, tooling, and best practices for mid-sized engineering teams to ensure scalable and maintainable codebases.
+                  Collaborated with mid-sized engineering teams as a technical consultant, enhancing project architecture and tooling decisions for scalable and maintainable codebases.
+                </ListItem>
+                <ListItem>
+                  Integrated and maintained SQL Server databases, crafting optimized queries and stored procedures to support real-time reporting and back-end performance.
                 </ListItem>
               </UnorderedList>
             </Box>
@@ -202,7 +207,7 @@ function App() {
             <Box minW={{ base: "100%", lg: "340px" }} maxW={{ base: "100%", lg: "340px" }} mt={{ md: '-5px'}}>
               <Text fontSize={{ base: '2xl', md: '4xl' }}>Full Stack Engineer</Text>
               <Text fontSize={{ base: '2xl', md: '4xl' }}>@ Fly.io</Text>
-              <Text fontSize={{ base: 'md', md: 'xl' }} mt={'1em'}>August 2022 - September 2025</Text>
+              <Text fontSize={{ base: 'md', md: 'xl' }} mt={'1em'}>August 2022 - September 2024</Text>
             </Box>
             <Box flex={1}>
               <Box fontSize={{ base: 'lg', md: '3xl' }} mb={2} mr={{ md: 20}}>
@@ -210,16 +215,19 @@ function App() {
               </Box>
               <UnorderedList spacing={3} textAlign={'start'} fontSize={{ base: 'md', md: 'lg' }}>
                 <ListItem>
-                  Architected complex database schemas and queries in PostgreSQL, ensuring data integrity and efficient data retrieval
+                  Engineered and maintained RESTful APIs and GraphQL endpoints in line with modern web architecture to optimize data retrieval speed by 25%.
                 </ListItem>
                 <ListItem>
-                  Restructured and implemented an upgraded OAuth authentication system, enhancing application security and improving user authentication experience by 30%.
+                  Developed a custom OAuth2 authentication system (using JWT & SSO) to enhance security protocols and reduce login failures by 30%, supporting robust API integration.
                 </ListItem>
                 <ListItem>
-                  Collaborated with frontend and backend teams to architect and implement RESTful and GraphQL APIs, ensuring smooth integration and data consistency.
+                  Constructed scalable Ruby microservices integrated with Redis caching, achieving a 40% improvement in request handling efficiency and aligning with microservices architecture principles.
                 </ListItem>
                 <ListItem>
-                  Engineered scalable Ruby applications, optimizing performance and ensuring robustness for high-traffic scenarios.
+                  Optimized PostgreSQL database queries under high traffic conditions to enhance overall application performance, showcasing expertise in full stack development and data management.
+                </ListItem>
+                <ListItem>
+                   Established automated CI/CD pipelines with GitHub Actions and Docker to facilitate reliable testing and accelerate deployment cycles by 20%, integrating modern development tools and best practices.
                 </ListItem>
               </UnorderedList>
             </Box>
@@ -247,14 +255,17 @@ function App() {
                 Technologies: Elixir, Phoenix Liveview, JavaScript, Ruby, Go, Postgres, Docker, Flyctl, HTML5, TailwindCSS, Git, Github, Slack
               </Box>
               <UnorderedList spacing={3} textAlign={'start'} fontSize={{ base: 'md', md: 'lg' }}>
-                <ListItem>
+                {/* <ListItem>
                   Leveraged Phoenix LiveView to create real-time, interactive web applications, enhancing user engagement and reducing the need for client-side JavaScript.
+                </ListItem> */}
+                <ListItem>
+                  Created reusable Elixir components, reducing dev time by 30% across multiple projects.
                 </ListItem>
                 <ListItem>
-                  Built reusable Elixir libraries and components, speeding up development cycles and ensuring consistent functionality across projects.
+                  Enhanced frontend performance via lazy loading & asset optimizations, improving Lighthouse scores by 20%.
                 </ListItem>
                 <ListItem>
-                  Participated in code reviews and provided feedback to other developers, helping to improve code quality and maintainability
+                  Built real-time interactive features using Phoenix LiveView and WebSockets, reducing frontend processing load by 40%.
                 </ListItem>
               </UnorderedList>
             </Box>
@@ -340,7 +351,7 @@ function App() {
             </VStack>
             <VStack>
               <Text fontSize={{ base: 'lg', md: '1.4em' }} fontWeight={'bold'}>Resume</Text>
-              <Link href="https://drive.google.com/file/d/1jjcvTvRAx2JS48Z5sOGADXt5JNde7aIn/view?usp=sharing">
+              <Link href="https://drive.google.com/file/d/1XufQ1mrhLEo0wNOf8UehETYVc2D9dvtO/view?usp=sharing">
                 <Icon as={FaIdBadge} boxSize={{ base: 6, md: 9 }} mt={'1em'} />
               </Link>
             </VStack>
