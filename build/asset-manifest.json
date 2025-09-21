@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0451a311.css",
-    "main.js": "/static/js/main.39637f82.js",
+    "main.js": "/static/js/main.c208972a.js",
     "static/js/453.acca0757.chunk.js": "/static/js/453.acca0757.chunk.js",
     "static/media/flask.png": "/static/media/flask.31c2a54ad2e338c48ff6.png",
     "static/media/rajdhani-devanagari-400-normal.woff2": "/static/media/rajdhani-devanagari-400-normal.6c9e66e639fb808aad84.woff2",
@@ -27,11 +27,11 @@
     "static/media/javascript.svg": "/static/media/javascript.218515feb76f692771fe00cfeadc46c8.svg",
     "static/media/css.svg": "/static/media/css.84e425077fc2d43f98cabb0d566ed8b1.svg",
     "main.0451a311.css.map": "/static/css/main.0451a311.css.map",
-    "main.39637f82.js.map": "/static/js/main.39637f82.js.map",
+    "main.c208972a.js.map": "/static/js/main.c208972a.js.map",
     "453.acca0757.chunk.js.map": "/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0451a311.css",
-    "static/js/main.39637f82.js"
+    "static/js/main.c208972a.js"
   ]
 }
