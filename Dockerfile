@@ -17,7 +17,10 @@ ENV NODE_ENV="production"
 FROM base as build
 
 # Install packages needed to build node modules
-RUN apt-get update -qq && \
+RUN sed -i 's/deb.debian.org/archive.debian.org/g' /etc/apt/sources.list && \
+    sed -i 's|security.debian.org|archive.debian.org|g' /etc/apt/sources.list && \
+    sed -i '/stretch-updates/d' /etc/apt/sources.list && \
+    apt-get update -qq && \
     apt-get install -y build-essential pkg-config python
 
 # Install node modules
