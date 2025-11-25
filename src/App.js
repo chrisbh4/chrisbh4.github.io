@@ -474,8 +474,7 @@ function AppContent() {
                   lineHeight="tall"
                   variants={fadeIn}
                 >
-                  Before diving into software development, I attended Bacone College in Oklahoma on a basketball scholarship.
-                  During my free time, I enjoy playing basketball, cooking new recipes, and leveling up my coding skills.
+                  Before I fell into the rabbit hole of tech, I was a collegiate athlete with a full ride basketball scholarship at Bacone College. Being a high level athlete gave me the mindset to stay disciplined, and keep growing daily. Those habits carried me to where I am today as a software engieer.
                 </MotionText>
               </GridItem>
               <GridItem>
@@ -484,8 +483,7 @@ function AppContent() {
                   lineHeight="tall"
                   variants={fadeIn}
                 >
-                  Ever since I built my first full-stack application, my passion for code has skyrocketed. I thrive in fast-paced
-                  environments that require goal-oriented communication and love working with new technologies to bring ideas to life.
+                  I got hooked on software the moment my first blog page came to life. Since then, I’ve been driven by new ideas, new challenges, and building things that matter. When I’m not coding, I’m either in the gym, on the basketball court, cooking, or tinkering with new tech
                 </MotionText>
               </GridItem>
             </Grid>
