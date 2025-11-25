@@ -428,16 +428,14 @@ function AppContent() {
                 initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                whileHover={{ rotate: 2, scale: 1.02 }}
+                maxW={{ base: "250px", md: "350px" }}
+                mx="auto"
               >
                 <Image
                   src="https://imgur.com/N3BB4kx.png"
                   alt="Christian Brown"
                   borderRadius="2xl"
                   boxShadow={`0 0 30px rgba(0, 255, 157, 0.1)`}
-                  _hover={{
-                    animation: `${glowAnimation} 2s infinite`,
-                  }}
                 />
               </MotionBox>
             </GridItem>
@@ -541,15 +539,16 @@ function AppContent() {
                 <Grid templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={8}>
                   <GridItem>
                     <VStack align="start" spacing={2}>
-                      <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold">Full Stack Engineer</Text>
-                      <Text fontSize={{ base: "xl", md: "2xl" }} color={accentColor}>@ Fly.io</Text>
-                      <Text color="gray.400">August 2022 - Present</Text>
+                      <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold">Full Stack Software Engineer</Text>
+                      <Text fontSize={{ base: "xl", md: "2xl" }} color={accentColor}>@ Stealth Startup</Text>
+                      <Text color="gray.400">September 2024 - Present</Text>
                     </VStack>
                   </GridItem>
                   <GridItem>
                     <Stack spacing={4}>
                       <Flex wrap="wrap" gap={2}>
-                        {['Elixir', 'Phoenix', 'JavaScript', 'Ruby', 'Go', 'Postgres', 'Docker'].map((tech) => (
+                        {/* {['JavaScript', 'React', 'Redux', 'Node.js', 'Express', 'PostgreSQL', 'Python', 'Flask'].map((tech) => ( */}
+                        {['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Node.js', 'GraphQL', 'Vercel', 'Azure', 'Docker', 'MS SQL Server'].map((tech) => (
                           <Box
                             key={tech}
                             px={3}
@@ -565,10 +564,11 @@ function AppContent() {
                         ))}
                       </Flex>
                       <UnorderedList spacing={2} color="gray.300">
-                        <ListItem>Architected complex database schemas and queries in PostgreSQL</ListItem>
-                        <ListItem>Restructured OAuth authentication system, improving user experience by 30%</ListItem>
-                        <ListItem>Collaborated on RESTful and GraphQL API implementation</ListItem>
-                        <ListItem>Engineered scalable Ruby applications for high-traffic scenarios</ListItem>
+                        <ListItem>Developed scalable full-stack solutions using JavaScript, TypeScript, and REST/GraphQL APIs, which aligned with best practices in full stack and web architecture and reduced API response times by up to 40%.</ListItem>
+                        <ListItem>Built autonomous AI agents using JavaScript and Langchain.js to automate research, web scraping, and document understanding workflows across logistic applications.</ListItem>
+                        <ListItem>Monitored AI agent behavior using logging middleware and custom analytics, iterating on tool strategies and prompt designs to reduce hallucination rates by 25%.</ListItem>
+                        <ListItem>Collaborated with mid-sized engineering teams as a technical consultant, enhancing project architecture and tooling decisions for scalable and maintainable codebases.</ListItem>
+                        <ListItem>Integrated and maintained SQL Server databases, crafting optimized queries and stored procedures to support real-time reporting and back-end performance.</ListItem>
                       </UnorderedList>
                     </Stack>
                   </GridItem>
@@ -598,15 +598,15 @@ function AppContent() {
                 <Grid templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={8}>
                   <GridItem>
                     <VStack align="start" spacing={2}>
-                      <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold">Software Engineering Fellow</Text>
-                      <Text fontSize={{ base: "xl", md: "2xl" }} color={accentColor}>@ App Academy</Text>
-                      <Text color="gray.400">March 2022 - August 2022</Text>
+                      <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold">Full Stack Software Engineer</Text>
+                      <Text fontSize={{ base: "xl", md: "2xl" }} color={accentColor}>@ Fly.io</Text>
+                      <Text color="gray.400">August 2022 - September 2024</Text>
                     </VStack>
                   </GridItem>
                   <GridItem>
                     <Stack spacing={4}>
                       <Flex wrap="wrap" gap={2}>
-                        {['JavaScript', 'React', 'Redux', 'Node.js', 'Express', 'PostgreSQL', 'Python', 'Flask'].map((tech) => (
+                        {['Elixir', 'Phoenix', 'JavaScript', 'Ruby', 'Go', 'Postgres', 'Docker'].map((tech) => (
                           <Box
                             key={tech}
                             px={3}
@@ -622,10 +622,11 @@ function AppContent() {
                         ))}
                       </Flex>
                       <UnorderedList spacing={2} color="gray.300">
-                        <ListItem>Developed full-stack applications using modern JavaScript frameworks and libraries</ListItem>
-                        <ListItem>Implemented RESTful APIs and database schemas using PostgreSQL</ListItem>
-                        <ListItem>Created responsive user interfaces with React and Redux</ListItem>
-                        <ListItem>Collaborated with peers on group projects using Git and GitHub</ListItem>
+                        <ListItem>Engineered and maintained RESTful APIs and GraphQL endpoints in line with modern web architecture to optimize data retrieval speed by 25%.</ListItem>
+                        <ListItem>Developed a custom OAuth2 authentication system (using JWT & SSO) to enhance security protocols and reduce login failures by 30%, supporting robust API integration.</ListItem>
+                        <ListItem>Constructed scalable Ruby microservices integrated with Redis caching, achieving a 40% improvement in request handling efficiency and aligning with microservices architecture principles.</ListItem>
+                        <ListItem>Optimized PostgreSQL database queries under high traffic conditions to enhance overall application performance, showcasing expertise in full stack development and data management.</ListItem>
+                        <ListItem>Established automated CI/CD pipelines with GitHub Actions and Docker to facilitate reliable testing and accelerate deployment cycles by 20%, integrating modern development tools and best practices.</ListItem>
                       </UnorderedList>
                     </Stack>
                   </GridItem>
@@ -655,15 +656,15 @@ function AppContent() {
                 <Grid templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={8}>
                   <GridItem>
                     <VStack align="start" spacing={2}>
-                      <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold">Software Engineer</Text>
-                      <Text fontSize={{ base: "xl", md: "2xl" }} color={accentColor}>@ Freelance</Text>
-                      <Text color="gray.400">January 2020 - Current</Text>
+                      <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold">Full Stack Software Engineer Intern</Text>
+                      <Text fontSize={{ base: "xl", md: "2xl" }} color={accentColor}>@ Fly.io</Text>
+                      <Text color="gray.400">May 2022 - August 2022</Text>
                     </VStack>
                   </GridItem>
                   <GridItem>
                     <Stack spacing={4}>
                       <Flex wrap="wrap" gap={2}>
-                        {['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Node.js', 'GraphQL', 'Vercel', 'Azure', 'Docker', 'MS SQL Server'].map((tech) => (
+                        {['Elixir', 'Phoenix', 'JavaScript', 'Ruby', 'Go', 'Postgres', 'Docker'].map((tech) => (
                           <Box
                             key={tech}
                             px={3}
@@ -679,67 +680,9 @@ function AppContent() {
                         ))}
                       </Flex>
                       <UnorderedList spacing={2} color="gray.300">
-                        <ListItem>Architected scalable full-stack solutions using JavaScript, TypeScript, REST and GraphQL APIs, reducing API response times by up to 40%</ListItem>
-                        <ListItem>Deployed applications to Vercel and Azure, utilizing CI/CD pipelines and environment configs to streamline releases and maintain 99.9% uptime</ListItem>
-                        <ListItem>Delivered production-ready interfaces styled with Tailwind CSS, ensuring mobile-first responsiveness and WCAG 2.1 accessibility compliance</ListItem>
-                        <ListItem>Consulted on technical architecture, tooling, and best practices for mid-sized engineering teams</ListItem>
-                      </UnorderedList>
-                    </Stack>
-                  </GridItem>
-                </Grid>
-              </MotionBox>
-
-              {/* Professional Basketball Experience */}
-              <MotionBox
-                p={8}
-                bg={cardBg}
-                borderRadius="xl"
-                boxShadow={`0 4px 20px rgba(0, 255, 157, 0.1)`}
-                border="1px"
-                borderColor={borderColor}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeIn}
-                whileHover={{
-                  transform: 'translateY(-4px)',
-                  boxShadow: `0 8px 30px rgba(0, 255, 157, 0.15)`,
-                  borderColor: accentColor,
-                  animation: `${glowAnimation} 2s infinite`,
-                }}
-                transition={{ duration: 0.3 }}
-              >
-                <Grid templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={8}>
-                  <GridItem>
-                    <VStack align="start" spacing={2}>
-                      <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold">Professional Basketball Player</Text>
-                      <Text fontSize={{ base: "xl", md: "2xl" }} color={accentColor}>@ Various Teams</Text>
-                      <Text color="gray.400">2018 - 2022</Text>
-                    </VStack>
-                  </GridItem>
-                  <GridItem>
-                    <Stack spacing={4}>
-                      <Flex wrap="wrap" gap={2}>
-                        {['Leadership', 'Teamwork', 'Communication', 'Discipline', 'Adaptability'].map((skill) => (
-                          <Box
-                            key={skill}
-                            px={3}
-                            py={1}
-                            borderRadius="full"
-                            bg="rgba(0, 255, 157, 0.1)"
-                            color={accentColor}
-                            fontSize="sm"
-                            fontWeight="medium"
-                          >
-                            {skill}
-                          </Box>
-                        ))}
-                      </Flex>
-                      <UnorderedList spacing={2} color="gray.300">
-                        <ListItem>Demonstrated exceptional leadership skills in high-pressure environments</ListItem>
-                        <ListItem>Collaborated effectively with diverse international teams</ListItem>
-                        <ListItem>Maintained peak physical and mental performance through rigorous training</ListItem>
-                        <ListItem>Adapted quickly to different playing styles and team dynamics</ListItem>
+                        <ListItem>Created reusable Elixir components, reducing dev time by 30% across multiple projects.</ListItem>
+                        <ListItem>Enhanced frontend performance via lazy loading & asset optimizations, improving Lighthouse scores by 20%.</ListItem>
+                        <ListItem>Built real-time interactive features using Phoenix LiveView and WebSockets, reducing frontend processing load by 40%.</ListItem>
                       </UnorderedList>
                     </Stack>
                   </GridItem>
