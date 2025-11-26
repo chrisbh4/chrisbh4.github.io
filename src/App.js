@@ -127,44 +127,6 @@ function AppContent() {
       position="relative"
       overflow="hidden"
     >
-      {/* Animated background elements */}
-      <MotionBox
-        position="absolute"
-        top="10%"
-        right="10%"
-        w="300px"
-        h="300px"
-        borderRadius="full"
-        bg="rgba(0, 255, 157, 0.05)"
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-      <MotionBox
-        position="absolute"
-        bottom="20%"
-        left="5%"
-        w="200px"
-        h="200px"
-        borderRadius="full"
-        bg="rgba(255, 0, 255, 0.05)"
-        animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.2, 0.4, 0.2],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-
       {/* Futuristic Navigation */}
       <MotionBox
         as="nav"
@@ -310,7 +272,7 @@ function AppContent() {
       </MotionBox>
 
       {/* Hero Section */}
-      <Box id="home" minH="100vh" pt={{ base: "120px", md: "100px" }} position="relative">
+      <Box id="home" minH="80vh" pt={{ base: "120px", md: "100px" }} position="relative">
         <Container maxW="container.xl">
           <Grid
             templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }}
@@ -349,7 +311,7 @@ function AppContent() {
                   color="gray.400"
                   variants={fadeIn}
                 >
-                  Building the future of web applications with cutting-edge technologies
+                  Building the future with cutting-edge technologies
                 </MotionText>
                 <MotionStack
                   direction={{ base: "column", sm: "row" }}
