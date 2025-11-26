@@ -545,8 +545,7 @@ function AppContent() {
                   <GridItem>
                     <Stack spacing={4}>
                       <Flex wrap="wrap" gap={2}>
-                        {/* {['JavaScript', 'React', 'Redux', 'Node.js', 'Express', 'PostgreSQL', 'Python', 'Flask'].map((tech) => ( */}
-                        {['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Node.js', 'GraphQL', 'Vercel', 'Azure', 'Docker', 'MS SQL Server'].map((tech) => (
+                        {['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Node.js', 'GraphQL', 'LangChain', 'Vercel', 'Azure', 'Docker'].map((tech) => (
                           <Box
                             key={tech}
                             px={3}
@@ -604,7 +603,7 @@ function AppContent() {
                   <GridItem>
                     <Stack spacing={4}>
                       <Flex wrap="wrap" gap={2}>
-                        {['Elixir', 'Phoenix', 'JavaScript', 'Ruby', 'Go', 'Postgres', 'Docker'].map((tech) => (
+                        {['Elixir', 'Phoenix Liveview', 'JavaScript', 'Ruby', 'Go', 'Postgres', 'TailwindCSS', 'Docker', 'FlyCTL'].map((tech) => (
                           <Box
                             key={tech}
                             px={3}
@@ -662,7 +661,7 @@ function AppContent() {
                   <GridItem>
                     <Stack spacing={4}>
                       <Flex wrap="wrap" gap={2}>
-                        {['Elixir', 'Phoenix', 'JavaScript', 'Ruby', 'Go', 'Postgres', 'Docker'].map((tech) => (
+                        {['Elixir', 'Phoenix Liveview', 'JavaScript', 'Ruby', 'Go', 'Postgres', 'TailwindCSS', 'Docker', 'FlyCTL'].map((tech) => (
                           <Box
                             key={tech}
                             px={3}
