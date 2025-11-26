@@ -148,7 +148,7 @@ function AppContent() {
               as="h1"
               fontSize={{ base: "2xl", md: "3xl" }}
               fontWeight="bold"
-              bgGradient={`linear(to-r, ${gradientStart}, ${gradientEnd})`}
+              bgGradient="linear(to-r, #3ac422ff, #00ff9d)"
               bgClip="text"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
@@ -292,7 +292,7 @@ function AppContent() {
                   as="h1"
                   fontSize={{ base: "4xl", md: "6xl" }}
                   fontWeight="bold"
-                  bgGradient={`linear(to-r, ${gradientStart}, ${gradientEnd})`}
+                  bgGradient="linear(to-r, #39ff14, #00ff9d)"
                   bgClip="text"
                   variants={scaleIn}
                 >
