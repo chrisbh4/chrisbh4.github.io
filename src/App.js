@@ -754,7 +754,7 @@ function AppContent() {
               bgClip="text"
               variants={scaleIn}
             >
-              Featured Projects
+              Projects
             </MotionText>
             <Projects />
           </MotionStack>
