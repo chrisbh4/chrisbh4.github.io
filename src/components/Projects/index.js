@@ -55,6 +55,10 @@ function Projects() {
               <img src={flask} alt="tech logo" />
               <div>Flask</div>
             </div>
+            <div className="project-tech js-tech">
+              <img src={"https://devicon-website.vercel.app/api/postgresql/plain.svg"} alt="tech logo" />
+              <div>PostgreSQL</div>
+            </div>
             <div className="project-tech">
               <img src={react} alt="tech logo" />
               <div>React.js</div>
@@ -180,6 +184,10 @@ function Projects() {
             <div className="project-tech js-tech">
               <img src={js} alt="tech logo" />
               <div>JavaScript</div>
+            </div>
+            <div className="project-tech js-tech">
+              <img src={"https://devicon-website.vercel.app/api/postgresql/plain.svg"} alt="tech logo" />
+              <div>PostgreSQL</div>
             </div>
             <div className="project-tech js-tech">
               <img src={"https://devicon-website.vercel.app/api/tailwindcss/plain.svg"} alt="tech logo" />

@@ -148,7 +148,7 @@ function AppContent() {
               as="h1"
               fontSize={{ base: "2xl", md: "3xl" }}
               fontWeight="bold"
-              bgGradient="linear(to-r, #3ac422ff, #00ff9d)"
+              bgGradient="linear(to-r, #23cc05ff,#008F11)"
               bgClip="text"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
@@ -292,7 +292,7 @@ function AppContent() {
                   as="h1"
                   fontSize={{ base: "4xl", md: "6xl" }}
                   fontWeight="bold"
-                  bgGradient="linear(to-r, #39ff14, #00ff9d)"
+                  bgGradient="linear(to-r, #23cc05ff, #003B00)"
                   bgClip="text"
                   variants={scaleIn}
                 >
@@ -373,7 +373,7 @@ function AppContent() {
                         icon={<Icon as={social.icon} />}
                         variant="ghost"
                         size="lg"
-                        fontSize="20px"
+                        fontSize="40px"
                         color={accentColor}
                         _hover={{
                           color: secondaryAccent,
@@ -848,7 +848,8 @@ function AppContent() {
             align="center"
             spacing={4}
           >
-            <Text color="gray.400">© 2024 Christian Brown. All rights reserved.</Text>
+            {/* <Text color="gray.400">© 2024 Christian Brown. All rights reserved.</Text> */}
+            <span></span>
             <HStack spacing={6}>
               {[
                 { icon: FaGithub, href: 'https://github.com/chrisbh4', label: 'GitHub' },
@@ -864,7 +865,7 @@ function AppContent() {
                     icon={<Icon as={social.icon} />}
                     variant="ghost"
                     size="lg"
-                    fontSize="20px"
+                    fontSize="30px"
                     color={accentColor}
                     _hover={{
                       color: secondaryAccent,
