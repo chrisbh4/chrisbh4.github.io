@@ -139,6 +139,58 @@ function Projects() {
           </div>
         </div>
 
+{/* Spotify Bot CARD */}
+        <div className="project-card spotify-card">
+          <div className="project-image spotify-image">
+            <img src="https://imgur.com/rluLo3S.png" alt="project page" />
+          </div>
+          <div className="project-description spotify-description">
+            Automate your Spotify streaming experience with our powerful bot.
+          </div>
+          <div className="project-links">
+            <a href="https://spotify-api.fly.dev/" target="_blank" rel="noopener noreferrer">
+              Live App
+              <i className="fas fa-globe"></i>
+            </a>
+            <a href="https://github.com/chrisbh4/spotify-api" target="_blank" rel="noopener noreferrer">
+              GitHub
+              <i className="fab fa-github" />
+            </a>
+          </div>
+          <div className="project-features-list spotify-features">
+            <div className="project-features-title">Features</div>
+            <Box textAlign={'start'} pl={'1em'}>
+              <Text>• Spotify API</Text>
+              <Text>• Spotify Web Playback SDK integration</Text>
+              <Text>• Automated streaming capability</Text>
+              <Text>• Real-time stream counting</Text>
+              <Text>• OAuth2 authentication implementation</Text>
+              <Text>• Automatic token refresh functionality</Text>
+            </Box>
+          </div>
+          <div className="project-techs">
+            <div className="project-tech">
+              <img src="https://devicon-website.vercel.app/api/elixir/original.svg" alt="tech logo" />
+              <div>Elixir</div>
+            </div>
+            <div className="project-tech">
+              <img  src="https://devicon-website.vercel.app/api/phoenix/original.svg" alt="tech logo" />
+              <div>Phoenix Liveview</div>
+            </div>
+            <div className="project-tech js-tech">
+              <img src={js} alt="tech logo" />
+              <div>JavaScript</div>
+            </div>
+            <div className="project-tech js-tech">
+              <img src={"https://devicon-website.vercel.app/api/tailwindcss/plain.svg"} alt="tech logo" />
+              <div>TailwindCSS</div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <div className="projects-container">
         {/* GoodTunes Card */}
         <div className="project-card goodTunes-card">
           <div className="project-image goodTunes-image">
@@ -193,57 +245,6 @@ function Projects() {
             <div className="project-tech goodTunes-tech">
               <img src={css} alt="tech logo" />
               <div>CSS</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="projects-container">
-        {/* Spotify Bot CARD */}
-        <div className="project-card spotify-card">
-          <div className="project-image spotify-image">
-            <img src="https://imgur.com/rluLo3S.png" alt="project page" />
-          </div>
-          <div className="project-description spotify-description">
-            Automate your Spotify streaming experience with our powerful bot.
-          </div>
-          <div className="project-links">
-            <a href="https://spotify-api.fly.dev/" target="_blank" rel="noopener noreferrer">
-              Live App
-              <i className="fas fa-globe"></i>
-            </a>
-            <a href="https://github.com/chrisbh4/spotify-api" target="_blank" rel="noopener noreferrer">
-              GitHub
-              <i className="fab fa-github" />
-            </a>
-          </div>
-          <div className="project-features-list spotify-features">
-            <div className="project-features-title">Features</div>
-            <Box textAlign={'start'} pl={'1em'}>
-              <Text>• Spotify API</Text>
-              <Text>• Spotify Web Playback SDK integration</Text>
-              <Text>• Automated streaming capability</Text>
-              <Text>• Real-time stream counting</Text>
-              <Text>• OAuth2 authentication implementation</Text>
-              <Text>• Automatic token refresh functionality</Text>
-            </Box>
-          </div>
-          <div className="project-techs">
-            <div className="project-tech">
-              <img src="https://devicon-website.vercel.app/api/elixir/original.svg" alt="tech logo" />
-              <div>Elixir</div>
-            </div>
-            <div className="project-tech">
-              <img  src="https://devicon-website.vercel.app/api/phoenix/original.svg" alt="tech logo" />
-              <div>Phoenix Liveview</div>
-            </div>
-            <div className="project-tech js-tech">
-              <img src={js} alt="tech logo" />
-              <div>JavaScript</div>
-            </div>
-            <div className="project-tech js-tech">
-              <img src={"https://devicon-website.vercel.app/api/tailwindcss/plain.svg"} alt="tech logo" />
-              <div>TailwindCSS</div>
             </div>
           </div>
         </div>

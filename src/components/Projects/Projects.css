@@ -84,9 +84,13 @@
 }
 
 .spudhub-image img,
-.beachitt-image img,
 .spotify-image img {
   max-width: 140px;
+}
+
+.spotify-image img,
+.beachitt-image img{
+  max-height: 100px;
 }
 
 .snkr-mrkt-image img {
