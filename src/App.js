@@ -110,7 +110,7 @@ function AppContent() {
     if (element) {
       element.scrollIntoView({
         behavior: 'smooth',
-        block: 'center'
+        block: 'start'
       });
     }
     if (isMobile) {
