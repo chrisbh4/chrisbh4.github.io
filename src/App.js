@@ -476,7 +476,7 @@ function AppContent() {
 
             {/* Experience Cards */}
             <Stack spacing={8}>
-              {/* Fly.io Experience */}
+              {/* Stealth Startup Experience */}
               <MotionBox
                 p={8}
                 bg={cardBg}
@@ -534,7 +534,7 @@ function AppContent() {
                 </Grid>
               </MotionBox>
 
-              {/* App Academy Experience */}
+              {/* Fly.io Experience */}
               <MotionBox
                 p={8}
                 bg={cardBg}
@@ -592,7 +592,7 @@ function AppContent() {
                 </Grid>
               </MotionBox>
 
-              {/* Freelance Experience */}
+              {/* Fly.io internship Experience */}
               <MotionBox
                 p={8}
                 bg={cardBg}
@@ -678,30 +678,30 @@ function AppContent() {
               gap={6}
             >
               {[
-                { name: 'JavaScript', icon: 'https://devicon-website.vercel.app/api/javascript/original.svg' },
-                { name: 'Python', icon: 'https://devicon-website.vercel.app/api/python/original-wordmark.svg' },
-                { name: 'Elixir', icon: 'https://devicon-website.vercel.app/api/elixir/original-wordmark.svg' },
-                { name: 'Ruby', icon: 'https://devicon-website.vercel.app/api/ruby/original-wordmark.svg' },
+                { name: 'JavaScript', icon: 'https://devicon-website.vercel.app/api/javascript/plain.svg' },
+                { name: 'Python', icon: 'https://devicon-website.vercel.app/api/python/plain.svg' },
+                { name: 'Elixir', icon: 'https://devicon-website.vercel.app/api/elixir/plain.svg' },
+                { name: 'Ruby', icon: 'https://devicon-website.vercel.app/api/ruby/plain-wordmark.svg' },
                 { name: 'Go', icon: 'https://devicon-website.vercel.app/api/go/original-wordmark.svg' },
-                { name: 'HTML5', icon: 'https://devicon-website.vercel.app/api/html5/original-wordmark.svg' },
-                { name: 'CSS3', icon: 'https://devicon-website.vercel.app/api/css3/original-wordmark.svg' },
+                { name: 'HTML5', icon: 'https://devicon-website.vercel.app/api/html5/plain-wordmark.svg' },
+                { name: 'CSS3', icon: 'https://devicon-website.vercel.app/api/css3/plain-wordmark.svg' },
                 { name: 'React', icon: 'https://devicon-website.vercel.app/api/react/original.svg' },
                 { name: 'Redux', icon: 'https://devicon-website.vercel.app/api/redux/original.svg' },
                 { name: 'Express', icon: 'https://devicon-website.vercel.app/api/express/original.svg' },
-                { name: 'Node.js', icon: 'https://devicon-website.vercel.app/api/nodejs/original-wordmark.svg' },
-                { name: 'Phoenix', icon: 'https://devicon-website.vercel.app/api/phoenix/original-wordmark.svg' },
-                { name: 'Rails', icon: 'https://devicon-website.vercel.app/api/rails/original-wordmark.svg' },
-                { name: 'PostgreSQL', icon: 'https://devicon-website.vercel.app/api/postgresql/original-wordmark.svg' },
+                { name: 'Node.js', icon: 'https://devicon-website.vercel.app/api/nodejs/original.svg' },
+                { name: 'Phoenix LiveView', icon: 'https://devicon-website.vercel.app/api/phoenix/plain.svg' },
+                { name: 'Rails', icon: 'https://devicon-website.vercel.app/api/rails/plain-wordmark.svg' },
+                { name: 'PostgreSQL', icon: 'https://devicon-website.vercel.app/api/postgresql/plain.svg' },
                 { name: 'Flask', icon: 'https://devicon-website.vercel.app/api/flask/original.svg' },
                 { name: 'SQLAlchemy', icon: 'https://devicon-website.vercel.app/api/sqlalchemy/original.svg' },
-                { name: 'Sequelize', icon: 'https://devicon-website.vercel.app/api/sequelize/original.svg' },
-                { name: 'Docker', icon: 'https://devicon-website.vercel.app/api/docker/original-wordmark.svg' },
+                { name: 'Sequelize', icon: 'https://devicon-website.vercel.app/api/sequelize/plain.svg' },
+                { name: 'Docker', icon: 'https://devicon-website.vercel.app/api/docker/plain.svg' },
                 { name: 'AWS', icon: 'https://devicon-website.vercel.app/api/amazonwebservices/original-wordmark.svg' },
-                { name: 'Tailwind CSS', icon: 'https://devicon-website.vercel.app/api/tailwindcss/original-wordmark.svg' },
+                { name: 'Tailwind CSS', icon: 'https://devicon-website.vercel.app/api/tailwindcss/plain.svg' },
                 { name: 'Git', icon: 'https://devicon-website.vercel.app/api/git/original.svg' },
-                { name: 'GitHub', icon: 'https://devicon-website.vercel.app/api/github/original-wordmark.svg' },
+                { name: 'GitHub', icon: 'https://devicon-website.vercel.app/api/github/original.svg' },
                 { name: 'Heroku', icon: 'https://devicon-website.vercel.app/api/heroku/original.svg' },
-                { name: 'Google Cloud', icon: 'https://devicon-website.vercel.app/api/google/original.svg' }
+                { name: 'Google Cloud', icon: 'https://devicon-website.vercel.app/api/googlecloud/original.svg' }
               ].map((tech) => (
                 <MotionBox
                   key={tech.name}
@@ -723,7 +723,7 @@ function AppContent() {
                       filter="brightness(0) invert(1)"
                       {...imageStyle}
                     />
-                    <Text fontSize="sm" color="gray.400">{tech.name}</Text>
+                    <Text fontSize="sm" color="gray.400 bold">{tech.name}</Text>
                   </VStack>
                 </MotionBox>
               ))}
