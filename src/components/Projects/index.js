@@ -28,11 +28,11 @@ function Projects() {
             Locally grown produce from farmers who have excess goods to share.
           </div>
           <div className="project-links">
-            <a href="https://spud-hub.fly.dev" target="_blank" rel="noopener noreferrer">
+            <a href="https://farm-to-fork.fly.dev/" target="_blank" rel="noopener noreferrer">
               Live App
               <i className="fas fa-globe"></i>
             </a>
-            <a href="https://github.com/michellekontoff/spudhub" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/chrisbh4/farm-to-fork" target="_blank" rel="noopener noreferrer">
               GitHub
               <i className="fab fa-github" />
             </a>
@@ -40,10 +40,10 @@ function Projects() {
           <div className="project-features-list">
             <div className="project-features-title">Features</div>
             <Box textAlign={'start'} pl={'1em'}>
+              <Text>• Oauth2: Credentails</Text>
               <Text>• Products Listings (CRUD)</Text>
               <Text>• Shopping Cart (CRUD)</Text>
               <Text>• Product Reviews (CRUD)</Text>
-              <Text>• Sign up / in with email</Text>
             </Box>
           </div>
           <div className="project-techs">
@@ -64,8 +64,12 @@ function Projects() {
               <div>Redux.js</div>
             </div>
             <div className="project-tech">
-              <img src={css} alt="tech logo" />
-              <div>CSS3</div>
+              <img src={"https://devicon-website.vercel.app/api/html5/plain-wordmark.svg"} alt="tech logo" />
+              <div>HTML</div>
+            </div>
+            <div className="project-tech">
+              <img src={"https://devicon-website.vercel.app/api/tailwindcss/plain.svg"} alt="tech logo" />
+              <div>TailwindCSS</div>
             </div>
           </div>
         </div>
@@ -90,13 +94,13 @@ function Projects() {
           <div className="project-features-list">
             <div className="project-features-title">Features</div>
             <Box textAlign={'start'} pl={'1em'}>
+              <Text>• Oauth2: Credentails</Text>
               <Text>• StockX.com API</Text>
+              <Text>• AWS S3 Image uploads</Text>
+              <Text>• Search Bar filtering</Text>
               <Text>• Sneaker listings (CRUD)</Text>
               <Text>• Sneaker reviews (CRUD)</Text>
-              <Text>• AWS S3 Image uploads</Text>
               <Text>• Shopping Cart (CRUD)</Text>
-              <Text>• Search Bar</Text>
-              <Text>• Sign up / in with email</Text>
             </Box>
           </div>
           <div className="project-techs">
@@ -121,7 +125,15 @@ function Projects() {
               <div>Express</div>
             </div>
             <div className="project-tech">
-              <Image src="https://devicon-website.vercel.app/api/amazonwebservices/original.svg?color=%23FBFBFB"></Image>
+              <img src={"https://devicon-website.vercel.app/api/html5/plain-wordmark.svg"} alt="tech logo" />
+              <div>HTML</div>
+            </div>
+            <div className="project-tech">
+              <img src={"https://devicon-website.vercel.app/api/tailwindcss/plain.svg"} alt="tech logo" />
+              <div>TailwindCSS</div>
+            </div>
+            <div className="project-tech">
+              <img src={"https://devicon-website.vercel.app/api/amazonwebservices/original.svg"} alt="tech logo" />
               <div>AWS</div>
             </div>
           </div>
@@ -150,11 +162,11 @@ function Projects() {
               Features
             </div>
             <Box textAlign={'start'} pl={'1em'}>
+              <Text>• Oauth2: Credentails</Text>
               <Text>• Discogs.com API</Text>
               <Text>• Create Shelves to add albums (CRUD)</Text>
               <Text>• Search bar by artist or album</Text>
               <Text>• Leave reviews for albums (CRUD)</Text>
-              <Text>• Oauth with email & password</Text>
             </Box>
           </div>
           <div className="project-techs goodTunes-techs">
@@ -162,25 +174,25 @@ function Projects() {
               <img src={js} alt="tech logo" />
               <div>JavaScript</div>
             </div>
-            <div className="project-tech goodTunes-tech">
-              <img src={react} alt="tech logo" />
-              <div>React.js</div>
-            </div>
-            <div className="project-tech goodTunes-tech">
-              <img src={redux} alt="tech logo" />
-              <div>Redux.js</div>
-            </div>
             <div className="project-tech goodTunes-tech express-tech">
               <img src={express} alt="tech logo" />
               <div>Express.js</div>
             </div>
             <div className="project-tech goodTunes-tech">
-              <img src={css} alt="tech logo" />
-              <div>CSS3</div>
+              <img src={"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pug/pug-original.svg"} alt="tech logo" />
+              <div>Pug.js</div>
             </div>
             <div className="project-tech goodTunes-tech">
               <img src={postgresql} alt="tech logo" />
               <div>PostgreSQL</div>
+            </div>
+            <div className="project-tech goodTunes-tech">
+              <img src={"https://devicon-website.vercel.app/api/html5/plain-wordmark.svg"} alt="tech logo" />
+              <div>HTML</div>
+            </div>
+            <div className="project-tech goodTunes-tech">
+              <img src={css} alt="tech logo" />
+              <div>CSS</div>
             </div>
           </div>
         </div>
@@ -218,16 +230,20 @@ function Projects() {
           </div>
           <div className="project-techs">
             <div className="project-tech">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elixir/elixir-original-wordmark.svg" alt="tech logo" />
+              <img src="https://devicon-website.vercel.app/api/elixir/original.svg" alt="tech logo" />
               <div>Elixir</div>
+            </div>
+            <div className="project-tech">
+              <img  src="https://devicon-website.vercel.app/api/phoenix/original.svg" alt="tech logo" />
+              <div>Phoenix Liveview</div>
             </div>
             <div className="project-tech js-tech">
               <img src={js} alt="tech logo" />
               <div>JavaScript</div>
             </div>
-            <div className="project-tech">
-              <img style={{ marginLeft: '40px' }} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/phoenix/phoenix-original.svg" alt="tech logo" />
-              <div>Phoenix Liveview</div>
+            <div className="project-tech js-tech">
+              <img src={"https://devicon-website.vercel.app/api/tailwindcss/plain.svg"} alt="tech logo" />
+              <div>TailwindCSS</div>
             </div>
           </div>
         </div>
@@ -252,6 +268,7 @@ function Projects() {
           <div className="project-features-list beachitt-features">
             <div className="project-features-title">Features</div>
             <Box textAlign={'start'} pl={'1em'}>
+              <Text>• Oauth2: Credentails</Text>
               <Text>• Google Maps API</Text>
               <Text>• AWS S3 Image uploads</Text>
               <Text>• Rental listings (CRUD)</Text>
@@ -279,9 +296,17 @@ function Projects() {
               <img src={postgresql} alt="tech logo" />
               <div>PostgreSQL</div>
             </div>
+            <div className="project-tech js-tech">
+              <img src={"https://devicon-website.vercel.app/api/tailwindcss/plain.svg"} alt="tech logo" />
+              <div>TailwindCSS</div>
+            </div>
             <div className="project-tech google-tech">
-              <img src="https://devicon-website.vercel.app/api/google/original.svg" alt="tech logo" />
-              <Text pos={'relative'} left={'4px'}>Google</Text>
+              <img src={"https://devicon-website.vercel.app/api/amazonwebservices/original.svg"} alt="tech logo" />
+              <div>AWS</div>
+            </div>
+            <div className="project-tech google-tech">
+              <img src="https://devicon-website.vercel.app/api/googlecloud/original.svg" alt="tech logo" />
+              <Text pos={'relative'} left={'4px'}>Google Cloud</Text>
             </div>
           </div>
         </div>

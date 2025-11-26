@@ -208,7 +208,8 @@ function AppContent() {
               >
                 Resume
               </Button>
-              <ColorModeSwitcher />
+              {/* Light & Dark mode switch */}
+              {/* <ColorModeSwitcher /> */}
             </HStack>
 
             {/* Mobile Menu Button */}
@@ -689,6 +690,7 @@ function AppContent() {
                 { name: 'Redux', icon: 'https://devicon-website.vercel.app/api/redux/original.svg' },
                 { name: 'Express', icon: 'https://devicon-website.vercel.app/api/express/original.svg' },
                 { name: 'Node.js', icon: 'https://devicon-website.vercel.app/api/nodejs/original.svg' },
+                { name: 'Pug.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pug/pug-plain.svg' },
                 { name: 'Phoenix LiveView', icon: 'https://devicon-website.vercel.app/api/phoenix/plain.svg' },
                 { name: 'Rails', icon: 'https://devicon-website.vercel.app/api/rails/plain-wordmark.svg' },
                 { name: 'PostgreSQL', icon: 'https://devicon-website.vercel.app/api/postgresql/plain.svg' },
